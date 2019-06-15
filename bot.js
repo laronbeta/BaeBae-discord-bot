@@ -2,17 +2,17 @@ const { Client, RichEmbed } = require('discord.js');
 const weather = require('weather-js');
 const client = new Client();
 
-client.login('YOUR_FCKING_TOKEN');
+client.login('TOOKEN');
 
 client.on('ready', () => {
  console.log(`Logged in as ${client.user.tag}!`)
- client.user.setStatus('Idle')
- client.user.setActivity('=help | Jisoo 💖 | zephyrxj')
+ client.user.setStatus('IDLE', 'Made by zephyrxj')
+ client.user.setActivity('>help | Kim Jisoo 💖', {type: 'playing' })
  });
 
 
 client.on('guildMemberAdd', member => {
-   const channel = member.guild.channels.find(ch => ch.name === 'chit-chat');
+   const channel = member.guild.channels.find(ch => ch.name === 'req-lagu');
    let memberTag = member.user.username;
    if (!channel) return;
    const embed = new RichEmbed()
@@ -63,7 +63,7 @@ client.on("guildCreate", guild => {
 
 client.on('message', message => {
 
- if (message.content === '=ping') {
+ if (message.content === '>ping') {
     const embed = new RichEmbed()
       .setTitle('PONG 🏓')
       .setColor(0xc4005a)
@@ -71,25 +71,25 @@ client.on('message', message => {
       message.channel.send(embed);
  }
 
-  if (message.content === '=avatar') {
+  if (message.content === '>avatar') {
     const embed = new RichEmbed()
       .setTitle('Avatar ditemukan!')
       .setColor(0xFF0000)
       .setDescription('Silahkan di-unduh');
       message.channel.send(embed);
   }
-  if (message.content === '=avatar') {
+  if (message.content === '>avatar') {
     message.channel.send(message.author.avatarURL);
   }
 
 
- if (message.content === '=help') {
+ if (message.content === '>help') {
    const embed = new RichEmbed()
      .setTitle('📎 Daftar perintah yang tersedia: 📎')
      .setColor(0xFF0000)
-     .addField('=ping', 'Untuk mengecek status ping dari bot ini.')
-     .addField('=avatar', 'Untuk mengunduh avatar.')
-     .addField('=help', 'Untuk menampilkan pesan ini.');
+     .addField('>ping', 'Untuk mengecek status ping dari bot ini.')
+     .addField('>avatar', 'Untuk mengunduh avatar.')
+     .addField('>help', 'Untuk menampilkan pesan ini.');
      message.channel.send(embed);
  }
 
