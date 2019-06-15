@@ -1,7 +1,7 @@
 const { Client, RichEmbed } = require('discord.js');
  const client = new Client();
 
-client.login('NTg5MzM0MDkwNDQ5Mjg5MjI2.XQSRAQ.L4vBQVZcJ9Xp68pB7rq3uCOd1l8');
+client.login('TOKEN');
 
 client.on('ready', () => {
  console.log(`Logged in as ${client.user.tag}!`);
