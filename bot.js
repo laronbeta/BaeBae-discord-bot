@@ -1,18 +1,17 @@
 const { Client, RichEmbed } = require('discord.js');
-const weather = require('weather-js');
 const client = new Client();
 
-client.login('TOOKEN');
+client.login('TOKEN');
 
 client.on('ready', () => {
  console.log(`Logged in as ${client.user.tag}!`)
  client.user.setStatus('IDLE', 'Made by zephyrxj')
- client.user.setActivity('>help | Kim Jisoo 💖', {type: 'playing' })
+ client.user.setActivity('>help | Kim Jisoo 💖| zephyrxj', {type: 'playing' })
  });
 
 
 client.on('guildMemberAdd', member => {
-   const channel = member.guild.channels.find(ch => ch.name === 'req-lagu');
+   const channel = member.guild.channels.find(ch => ch.name === 'general');
    let memberTag = member.user.username;
    if (!channel) return;
    const embed = new RichEmbed()
@@ -81,6 +80,7 @@ client.on('message', message => {
   if (message.content === '>avatar') {
     message.channel.send(message.author.avatarURL);
   }
+
 
 
  if (message.content === '>help') {
