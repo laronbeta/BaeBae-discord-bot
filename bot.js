@@ -1,7 +1,9 @@
 const { Client, RichEmbed } = require('discord.js');
+const weather = require('weather-js');
 const client = new Client();
+const prefix = '>'
 
-client.login('TOKEN');
+client.login('TOKED');
 
 client.on('ready', () => {
  console.log(`Logged in as ${client.user.tag}!`)
@@ -62,7 +64,11 @@ client.on("guildCreate", guild => {
 
 client.on('message', message => {
 
- if (message.content === '>ping') {
+  let cont = message.content.slice(prefix.length).split(" ");
+  let args = cont.slice(1);
+  let msg = message.content;
+
+  if (msg.startsWith(prefix + 'ping')) {
     const embed = new RichEmbed()
       .setTitle('PONG 🏓')
       .setColor(0xc4005a)
@@ -70,25 +76,84 @@ client.on('message', message => {
       message.channel.send(embed);
  }
 
-  if (message.content === '>avatar') {
+  if (msg.startsWith(prefix + 'dp')) {
     const embed = new RichEmbed()
       .setTitle('Avatar ditemukan!')
       .setColor(0xFF0000)
       .setDescription('Silahkan di-unduh');
       message.channel.send(embed);
   }
-  if (message.content === '>avatar') {
+  if (msg.startsWith(prefix + 'dp')) {
     message.channel.send(message.author.avatarURL);
   }
 
+    if (msg.startsWith(prefix + 'cuaca')) {
 
+        weather.find({search: args.join(" "), degreeType: 'C'}, function(err, result) {
+            if (err) message.channel.send(err);
+            if (result === undefined || result.length === 0) {
+                message.channel.send('**Lokasi tidak ditemukan!**')
+                return;
+            }
 
- if (message.content === '>help') {
+            var location = result[0].location;
+            var current = result[0].current;
+
+        switch(current.skytext){
+            case "Mostly Sunny":
+            var skytext = "Hampir cerah";
+            break;
+            case "Cloudy" :
+            var skytext = "Berawan";
+            break;
+            case "Partly Cloudy":
+            var skytext = "Cerah dan berawan";
+            break;
+            case "Sunny":
+            var skytext = "Cerah";
+            break;
+            case "Clear" :
+            var skytext = "Cerah";
+            break;
+            case "Mostly Clear":
+            var skytext = "Hampir Cerah";
+            break;
+            case "Mostly Cloudy":
+            var skytext = "Hampir mendung";
+            break;
+            case "Partly Sunny":
+            var skytext = "Cerah sebagian";
+            break;
+            case "Light Rain":
+            var skytext = "Hujan Ringan";
+            break;
+            default:
+            var skytext = current.skytext;
+            break
+          }
+
+            const embed = new RichEmbed()
+                .setDescription('**' + skytext + '**')
+                .setAuthor(`Cuaca untuk daerah ${current.observationpoint} pada ${current.date}`)
+                .setThumbnail(current.imageUrl)
+                .setColor(0xff7da5)
+                .addField('Waktu bagian',`UTC${location.timezone}`, true)
+                .addField('Jenis derajat',location.degreetype, true)
+                .addField('Suhu',`${current.temperature}℃`, true)
+                .addField('Terasa seperti', `${current.feelslike}℃`, true)
+                .addField('Kecepatan angin',`${current.winddisplay}`, true)
+                .addField('Kelembapan', `${current.humidity}%`, true)
+                message.channel.send({embed});
+        });
+    }
+
+if (msg.startsWith(prefix + 'help')) {
    const embed = new RichEmbed()
      .setTitle('📎 Daftar perintah yang tersedia: 📎')
      .setColor(0xFF0000)
      .addField('>ping', 'Untuk mengecek status ping dari bot ini.')
-     .addField('>avatar', 'Untuk mengunduh avatar.')
+     .addField('>dp', 'Untuk mengunduh avatar.')
+     .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota anda.')
      .addField('>help', 'Untuk menampilkan pesan ini.');
      message.channel.send(embed);
  }
