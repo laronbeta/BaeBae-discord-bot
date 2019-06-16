@@ -1,2 +1,6 @@
-# My 김지수 discord-bot
-prettiest discord-bot ever i seen xD
+# My useless discord bot
+Pretty bot with jisoo inside xD
+
+Features:
+1. Grab your avatar
+2. Weather info
