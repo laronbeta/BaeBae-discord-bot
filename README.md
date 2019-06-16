@@ -1,2 +1,2 @@
-# My simple discord-bot
-prettiest discord-bot ever 1 seen xD
+# My 김지수 discord-bot
+prettiest discord-bot ever i seen xD
