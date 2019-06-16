@@ -9,7 +9,15 @@ client.on('ready', () => {
  console.log(`Logged in as ${client.user.tag}!`)
  client.user.setStatus('IDLE', 'Made by zephyrxj')
  client.user.setActivity('>help | Kim Jisoo 💖| zephyrxj', {type: 'playing' })
- });
+ const channel = client.channels.get("454543496389459988");
+ if (!channel) return console.error("The channel does not exist!");
+ channel.join().then(connection => {
+  console.log("Successfully connected.");
+  })
+  .catch(e => {
+  console.error(e);
+  });
+});
 
 
 client.on('guildMemberAdd', member => {
