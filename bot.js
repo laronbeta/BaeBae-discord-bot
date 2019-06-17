@@ -3,20 +3,12 @@ const weather = require('weather-js');
 const client = new Client();
 const prefix = '>'
 
-client.login('TOKED');
+client.login('TOKKEN');
 
 client.on('ready', () => {
  console.log(`Logged in as ${client.user.tag}!`)
  client.user.setStatus('IDLE', 'Made by zephyrxj')
- client.user.setActivity('>help | Kim Jisoo 💖| zephyrxj', {type: 'playing' })
- const channel = client.channels.get("454543496389459988");
- if (!channel) return console.error("The channel does not exist!");
- channel.join().then(connection => {
-  console.log("Successfully connected.");
-  })
-  .catch(e => {
-  console.error(e);
-  });
+ client.user.setActivity('Kim Jisoo 💖| zephyrxj', {type: 'playing' })
 });
 
 
@@ -75,6 +67,29 @@ client.on('message', message => {
   let cont = message.content.slice(prefix.length).split(" ");
   let args = cont.slice(1);
   let msg = message.content;
+
+  if (msg.startsWith(prefix + 'masuk')) {
+    const channel = message.member.voiceChannel;
+    channel.join()
+    .then(connection => console.log('Connected!'))
+    .catch(console.error);
+     const embed = new RichEmbed()
+     .setTitle('Channel ditemukan!')
+     .setColor(0xc4005a)
+     message.channel.send(embed);
+  }
+
+  if (msg.startsWith(prefix + 'keluar')) {
+    if (message.guild.me.voiceChannel !== undefined) {
+      message.guild.me.voiceChannel.leave();
+      const embed = new RichEmbed()
+      .setTitle('OK. Aku keluar!')
+      .setColor(0xc4005a)
+      message.channel.send(embed);
+    } else {
+      message.reply("Aku tidak ada di channel itu!");
+    }
+  }
 
   if (msg.startsWith(prefix + 'ping')) {
     const embed = new RichEmbed()
@@ -159,9 +174,9 @@ if (msg.startsWith(prefix + 'help')) {
    const embed = new RichEmbed()
      .setTitle('📎 Daftar perintah yang tersedia: 📎')
      .setColor(0xFF0000)
-     .addField('>ping', 'Untuk mengecek status ping dari bot ini.')
-     .addField('>dp', 'Untuk mengunduh avatar.')
-     .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota anda.')
+     .addField('>ping', 'Untuk mengecek status ping dari aku.')
+     .addField('>dp', 'Untuk mengunduh avatar kamu.')
+     .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
      .addField('>help', 'Untuk menampilkan pesan ini.');
      message.channel.send(embed);
  }
