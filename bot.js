@@ -96,6 +96,9 @@ client.on('message', message => {
   		    bot.sendMessage({
   	        });
   		  }
+    })
+  }
+};
 
   if (msg.startsWith(prefix + 'masuk')) {
     const channel = message.member.voiceChannel;
