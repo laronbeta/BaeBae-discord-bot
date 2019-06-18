@@ -23,7 +23,7 @@ client.login(process.env.TOKEN);
 client.on('ready', () => {
  console.log(`Logged in as ${client.user.tag}!`)
  client.user.setStatus('IDLE', 'Made by zephyrxj')
- client.user.setActivity('Kim Jisoo 💖| zephyrxj', {type: 'playing' })
+ client.user.setActivity('Kim Jisoo 💖| zephyrxj', {type: 'watching' })
 });
 
 
