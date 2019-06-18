@@ -3,10 +3,22 @@ const weather = require('weather-js');
 const client = new Client();
 const prefix = '>'
 
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  console.log(Date.now() + " Ping Received");
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+
 var cheerio = require("cheerio");
 var request = require("request");
 
-client.login('bot.token');
+client.login(process.env.TOKEN);
 
 client.on('ready', () => {
  console.log(`Logged in as ${client.user.tag}!`)
@@ -115,7 +127,7 @@ client.on('message', message => {
     .then(connection => console.log('Connected!'))
     .catch(console.error);
      const embed = new RichEmbed()
-     .setTitle('Channel ditemukan!')
+     .setTitle('OK. Aku masuk ya!')
      .setColor(0xc4005a)
      message.channel.send(embed);
   }
@@ -219,7 +231,7 @@ if (msg.startsWith(prefix + 'help')) {
      .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
      .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
      .addField('>help', 'Untuk menampilkan pesan ini.')
-     .setFooter('Dikembangkan oleh zephyrxj sejak 2019/06/16');
+     .setFooter('Dikembangkan oleh zephyrxj 🤓');
      message.channel.send(embed);
  }
 
