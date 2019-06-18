@@ -1,5 +1,5 @@
 # My simple discord bot
-Hmm okay this bot is purely kanged from others bot
+Hmm okay this bot is purely kangs from others bot, so whats ur problem?
 
 Features:
 1. Weather info
