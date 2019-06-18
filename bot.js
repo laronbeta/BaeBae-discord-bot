@@ -82,49 +82,12 @@ client.on('message', message => {
   let cont = message.content.slice(prefix.length).split(" ");
   let args = cont.slice(1);
   let msg = message.content;
-
-
   var parts = message.content.split(" ");
-      if (msg.startsWith(prefix + 'gambar')) {
-          image(message, parts);
-      }
-
-  function image(message, parts) {
-
-      var search = parts.slice(1).join(" ");
-
-      var options = {
-          url: "http://results.dogpile.com/serp?qc=images&q=" + search,
-          method: "GET",
-          headers: {
-              "Accept": "text/html",
-              "User-Agent": "Chrome"
-          }
-      };
-      request(options, function(error, response, responseBody) {
-          if (error) {
-              return;
-          }
-
-          $ = cheerio.load(responseBody);
-          var links = $(".image a.link");
-          var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
-          console.log(urls);
-          if (!urls.length) {
-              return;
-          }
-          message.channel.send( urls[0] );
-          const embed = new RichEmbed()
-          .setTitle('Gambar yg dimaksud telah ditemukan!')
-          .setColor(0x538898)
-          message.channel.send(embed);
-      });
-}
 
   if (msg.startsWith(prefix + 'masuk')) {
     const channel = message.member.voiceChannel;
     channel.join()
-    .then(connection => console.log('Connected!'))
+    .then(connection => console.log('Berhasil masuk ke channel!'))
     .catch(console.error);
      const embed = new RichEmbed()
      .setTitle('OK. Aku masuk ya!')
@@ -220,6 +183,40 @@ client.on('message', message => {
                 message.channel.send({embed});
         });
     }
+
+    if (msg.startsWith(prefix + 'gambar')) {
+        image(message, parts);
+    }
+
+    function image(message, parts) {
+    var search = parts.slice(1).join(" ");
+    var options = {
+        url: "http://results.dogpile.com/serp?qc=images&q=" + search,
+        method: "GET",
+        headers: {
+            "Accept": "text/html",
+            "User-Agent": "Chrome"
+        }
+    };
+    request(options, function(error, response, responseBody) {
+        if (error) {
+            return;
+        }
+
+        $ = cheerio.load(responseBody);
+        var links = $(".image a.link");
+        var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
+        console.log(urls);
+        if (!urls.length) {
+            return;
+        }
+        message.channel.send( urls[0] );
+        const embed = new RichEmbed()
+        .setTitle('Gambar yg dimaksud telah ditemukan!')
+        .setColor(0x538898)
+        message.channel.send(embed);
+    });
+}
 
 if (msg.startsWith(prefix + 'help')) {
    const embed = new RichEmbed()
