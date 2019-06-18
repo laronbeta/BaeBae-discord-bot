@@ -93,7 +93,7 @@ client.on('message', message => {
 
   		  	content =  JSON.parse(body)
   		  	item = Math.floor(Math.random() * 10)
-  		    bot.sendMessage({
+  		    message.channel.send({
   	        });
   		  }
     })
