@@ -1,5 +1,5 @@
-# My useless discord bot
-What a beauty bot with jisoo inside xD
+# My simple discord bot
+Hmm okay this bot is purely kanged from others bot
 
 Features:
 1. Weather info
