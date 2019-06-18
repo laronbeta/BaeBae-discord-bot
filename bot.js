@@ -84,22 +84,6 @@ client.on('message', message => {
   let msg = message.content;
   var parts = message.content.split(" ");
 
-  if (msg.startsWith(prefix + 'gif')) {
-  	{
-  		var term = message.substring(3);
-  		term = encodeURI(term)
-  		request('http://api.giphy.com/v1/gifs/search?q=' + term + '&rating=r&api_key=dc6zaTOxFJmzC', function (error, response, body) {
-  		  if (!error && response.statusCode == 200) {
-
-  		  	content =  JSON.parse(body)
-  		  	item = Math.floor(Math.random() * 10)
-  		    message.channel.send({
-  	        });
-  		  }
-    })
-  }
-};
-
   if (msg.startsWith(prefix + 'masuk')) {
     const channel = message.member.voiceChannel;
     channel.join()
