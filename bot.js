@@ -3,7 +3,10 @@ const weather = require('weather-js');
 const client = new Client();
 const prefix = '>'
 
-client.login('TOKKEN');
+var cheerio = require("cheerio");
+var request = require("request");
+
+client.login('bot.token');
 
 client.on('ready', () => {
  console.log(`Logged in as ${client.user.tag}!`)
@@ -68,6 +71,44 @@ client.on('message', message => {
   let args = cont.slice(1);
   let msg = message.content;
 
+
+  var parts = message.content.split(" ");
+      if (msg.startsWith(prefix + 'gambar')) {
+          image(message, parts);
+      }
+
+  function image(message, parts) {
+
+      var search = parts.slice(1).join(" ");
+
+      var options = {
+          url: "http://results.dogpile.com/serp?qc=images&q=" + search,
+          method: "GET",
+          headers: {
+              "Accept": "text/html",
+              "User-Agent": "Chrome"
+          }
+      };
+      request(options, function(error, response, responseBody) {
+          if (error) {
+              return;
+          }
+
+          $ = cheerio.load(responseBody);
+          var links = $(".image a.link");
+          var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
+          console.log(urls);
+          if (!urls.length) {
+              return;
+          }
+          message.channel.send( urls[0] );
+          const embed = new RichEmbed()
+          .setTitle('Gambar yg dimaksud telah ditemukan!')
+          .setColor(0x538898)
+          message.channel.send(embed);
+      });
+}
+
   if (msg.startsWith(prefix + 'masuk')) {
     const channel = message.member.voiceChannel;
     channel.join()
@@ -100,14 +141,12 @@ client.on('message', message => {
  }
 
   if (msg.startsWith(prefix + 'dp')) {
+      message.channel.send(message.author.avatarURL);
     const embed = new RichEmbed()
       .setTitle('Avatar ditemukan!')
       .setColor(0xFF0000)
       .setDescription('Silahkan di-unduh');
       message.channel.send(embed);
-  }
-  if (msg.startsWith(prefix + 'dp')) {
-    message.channel.send(message.author.avatarURL);
   }
 
     if (msg.startsWith(prefix + 'cuaca')) {
@@ -174,10 +213,13 @@ if (msg.startsWith(prefix + 'help')) {
    const embed = new RichEmbed()
      .setTitle('📎 Daftar perintah yang tersedia: 📎')
      .setColor(0xFF0000)
-     .addField('>ping', 'Untuk mengecek status ping dari aku.')
+     .setImage("https://media.giphy.com/media/3otPorHw3EPYIxhw40/giphy.gif")
+     .addField('>ping', 'Untuk mengecek status ping aku.')
      .addField('>dp', 'Untuk mengunduh avatar kamu.')
      .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
-     .addField('>help', 'Untuk menampilkan pesan ini.');
+     .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
+     .addField('>help', 'Untuk menampilkan pesan ini.')
+     .setFooter('Dikembangkan oleh zephyrxj sejak 2019/06/16');
      message.channel.send(embed);
  }
 
