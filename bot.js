@@ -23,7 +23,7 @@ client.login(process.env.TOKEN);
 client.on('ready', () => {
  console.log(`Logged in as ${client.user.tag}!`)
  client.user.setStatus('IDLE', 'Made by zephyrxj')
- client.user.setActivity('Kim Jisoo 💖| zephyrxj', {type: 'watching' })
+ client.user.setActivity('Kim Jisoo 💘', {type: 'watching' })
 });
 
 
@@ -53,7 +53,7 @@ client.on("guildCreate", guild => {
      let channel = client.channels.get(guild.systemChannelID || channelID);
      const embed = new RichEmbed()
        .setTitle("Annyeonghaseyo, terima kasih telah mengundang saya ke server ini 💖")
-       .setColor(0xff7da5)
+       .setColor(0xff487e)
        .setImage("https://media.giphy.com/media/Cmr1OMJ2FN0B2/giphy.gif");
        channel.send(embed);
  });
@@ -73,7 +73,7 @@ client.on("guildCreate", guild => {
       let channel = client.channels.get(guild.systemChannelID || channelID);
       const embed = new RichEmbed()
         .setTitle("Ketik =help untuk menampilkan daftar perintah.")
-        .setColor(0xff7da5)
+        .setColor(0xff487e)
         channel.send(embed);
   });
 
@@ -91,7 +91,7 @@ client.on('message', message => {
     .catch(console.error);
      const embed = new RichEmbed()
      .setTitle('OK. Aku masuk ya!')
-     .setColor(0xc4005a)
+     .setColor(0x009975)
      message.channel.send(embed);
   }
 
@@ -100,7 +100,7 @@ client.on('message', message => {
       message.guild.me.voiceChannel.leave();
       const embed = new RichEmbed()
       .setTitle('OK. Aku keluar!')
-      .setColor(0xc4005a)
+      .setColor(0x009975)
       message.channel.send(embed);
     } else {
       message.reply("Aku tidak ada di channel itu!");
@@ -110,19 +110,19 @@ client.on('message', message => {
   if (msg.startsWith(prefix + 'ping')) {
     const embed = new RichEmbed()
       .setTitle('PONG 🏓')
-      .setColor(0xc4005a)
+      .setColor(0x28c3d4)
       .setDescription("Ping: " + Math.round(client.ping) + ' ms')
       message.channel.send(embed);
  }
 
-  if (msg.startsWith(prefix + 'dp')) {
-      message.channel.send(message.author.avatarURL);
-    const embed = new RichEmbed()
-      .setTitle('Avatar ditemukan!')
-      .setColor(0xFF0000)
-      .setDescription('Silahkan di-unduh');
-      message.channel.send(embed);
-  }
+ if (message.content.startsWith(prefix + 'dp')) {
+    const user = message.mentions.users.first() || message.author;
+    const avatarEmbed = new RichEmbed()
+        .setTitle('Oke. foto profil telah di-ambil.')
+        .setColor(0xfcf594)
+        .setImage(user.avatarURL);
+    message.channel.send(avatarEmbed);
+}
 
     if (msg.startsWith(prefix + 'cuaca')) {
 
@@ -221,10 +221,10 @@ client.on('message', message => {
 if (msg.startsWith(prefix + 'help')) {
    const embed = new RichEmbed()
      .setTitle('📎 Daftar perintah yang tersedia: 📎')
-     .setColor(0xFF0000)
+     .setColor(0xff7a8a)
      .setImage("https://media.giphy.com/media/3otPorHw3EPYIxhw40/giphy.gif")
      .addField('>ping', 'Untuk mengecek status ping aku.')
-     .addField('>dp', 'Untuk mengunduh avatar kamu.')
+     .addField('>dp', 'Untuk mengunduh avatar seseorang.')
      .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
      .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
      .addField('>help', 'Untuk menampilkan pesan ini.')
