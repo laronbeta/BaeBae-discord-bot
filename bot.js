@@ -83,7 +83,7 @@ client.on('message', message => {
   let args = cont.slice(1);
   let msg = message.content;
   var parts = message.content.split(" ");
-
+    
   if (msg.startsWith(prefix + 'masuk')) {
     const channel = message.member.voiceChannel;
     channel.join()
@@ -115,14 +115,14 @@ client.on('message', message => {
       message.channel.send(embed);
  }
 
-  if (msg.startsWith(prefix + 'dp')) {
-      message.channel.send(message.author.avatarURL);
-    const embed = new RichEmbed()
-      .setTitle('Avatar ditemukan!')
-      .setColor(0xFF0000)
-      .setDescription('Silahkan di-unduh');
-      message.channel.send(embed);
-  }
+ if (message.content.startsWith(prefix + 'dp')) {
+    const user = message.mentions.users.first() || message.author;
+    const avatarEmbed = new RichEmbed()
+        .setTitle('Oke. foto profil telah di-ambil.')
+        .setColor(0xc4005a)
+        .setImage(user.avatarURL);
+    message.channel.send(avatarEmbed);
+}
 
     if (msg.startsWith(prefix + 'cuaca')) {
 
@@ -224,7 +224,7 @@ if (msg.startsWith(prefix + 'help')) {
      .setColor(0xFF0000)
      .setImage("https://media.giphy.com/media/3otPorHw3EPYIxhw40/giphy.gif")
      .addField('>ping', 'Untuk mengecek status ping aku.')
-     .addField('>dp', 'Untuk mengunduh avatar kamu.')
+     .addField('>dp', 'Untuk mengunduh avatar seseorang.')
      .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
      .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
      .addField('>help', 'Untuk menampilkan pesan ini.')
