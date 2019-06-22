@@ -21,61 +21,61 @@ var request = require("request");
 client.login(process.env.TOKEN);
 
 client.on('ready', () => {
- console.log(`Logged in as ${client.user.tag}!`)
- client.user.setStatus('IDLE', 'Made by zephyrxj')
- client.user.setActivity('Kim Jisoo 💘', {type: 'watching' })
+  console.log(`Logged in as ${client.user.tag}!`)
+  client.user.setStatus('IDLE', 'Made by zephyrxj')
+  client.user.setActivity('Kim Jisoo 💘', {type: 'watching' })
 });
 
 
 client.on('guildMemberAdd', member => {
-   const channel = member.guild.channels.find(ch => ch.name === 'general');
-   let memberTag = member.user.username;
-   if (!channel) return;
-   const embed = new RichEmbed()
-     .setTitle("Annyeonghaseyo " + memberTag + ', selamat datang di server kami 💖')
-     .setColor(0xc4005a)
-     .setImage("https://media.giphy.com/media/Cmr1OMJ2FN0B2/giphy.gif");
-     channel.send(embed);
- });
+  const channel = member.guild.channels.find(ch => ch.name === 'general');
+  let memberTag = member.user.username;
+  if (!channel) return;
+  const embed = new RichEmbed()
+  .setTitle("Annyeonghaseyo " + memberTag + ', selamat datang di server kami 💖')
+  .setColor(0xc4005a)
+  .setImage("https://media.giphy.com/media/Cmr1OMJ2FN0B2/giphy.gif");
+  channel.send(embed);
+});
 
 client.on("guildCreate", guild => {
-     let channelID;
-     let channels = guild.channels;
-     channelLoop:
-     for (let c of channels) {
-         let channelType = c[1].type;
-         if (channelType === "text") {
-             channelID = c[0];
-             break channelLoop;
-         }
-     }
+  let channelID;
+  let channels = guild.channels;
+  channelLoop:
+  for (let c of channels) {
+    let channelType = c[1].type;
+    if (channelType === "text") {
+      channelID = c[0];
+      break channelLoop;
+    }
+  }
 
-     let channel = client.channels.get(guild.systemChannelID || channelID);
-     const embed = new RichEmbed()
-       .setTitle("Annyeonghaseyo, terima kasih telah mengundang saya ke server ini 💖")
-       .setColor(0xff487e)
-       .setImage("https://media.giphy.com/media/Cmr1OMJ2FN0B2/giphy.gif");
-       channel.send(embed);
- });
+  let channel = client.channels.get(guild.systemChannelID || channelID);
+  const embed = new RichEmbed()
+  .setTitle("Annyeonghaseyo, terima kasih telah mengundang saya ke server ini 💖")
+  .setColor(0xff487e)
+  .setImage("https://media.giphy.com/media/Cmr1OMJ2FN0B2/giphy.gif");
+  channel.send(embed);
+});
 
- client.on("guildCreate", guild => {
-      let channelID;
-      let channels = guild.channels;
-      channelLoop:
-      for (let c of channels) {
-          let channelType = c[1].type;
-          if (channelType === "text") {
-              channelID = c[0];
-              break channelLoop;
-          }
-      }
+client.on("guildCreate", guild => {
+  let channelID;
+  let channels = guild.channels;
+  channelLoop:
+  for (let c of channels) {
+    let channelType = c[1].type;
+    if (channelType === "text") {
+      channelID = c[0];
+      break channelLoop;
+    }
+  }
 
-      let channel = client.channels.get(guild.systemChannelID || channelID);
-      const embed = new RichEmbed()
-        .setTitle("Ketik =help untuk menampilkan daftar perintah.")
-        .setColor(0xff487e)
-        channel.send(embed);
-  });
+  let channel = client.channels.get(guild.systemChannelID || channelID);
+  const embed = new RichEmbed()
+  .setTitle("Ketik =help untuk menampilkan daftar perintah.")
+  .setColor(0xff487e)
+  channel.send(embed);
+});
 
 client.on('message', message => {
 
@@ -89,10 +89,10 @@ client.on('message', message => {
     channel.join()
     .then(connection => console.log('Berhasil masuk ke channel!'))
     .catch(console.error);
-     const embed = new RichEmbed()
-     .setTitle('OK. Aku masuk ya!')
-     .setColor(0x009975)
-     message.channel.send(embed);
+    const embed = new RichEmbed()
+    .setTitle('OK. Aku masuk ya!')
+    .setColor(0x009975)
+    message.channel.send(embed);
   }
 
   if (msg.startsWith(prefix + 'keluar')) {
@@ -109,127 +109,127 @@ client.on('message', message => {
 
   if (msg.startsWith(prefix + 'ping')) {
     const embed = new RichEmbed()
-      .setTitle('PONG 🏓')
-      .setColor(0x28c3d4)
-      .setDescription("Ping: " + Math.round(client.ping) + ' ms')
-      message.channel.send(embed);
- }
+    .setTitle('PONG 🏓')
+    .setColor(0x28c3d4)
+    .setDescription("Ping: " + Math.round(client.ping) + ' ms')
+    message.channel.send(embed);
+  }
 
- if (message.content.startsWith(prefix + 'dp')) {
+  if (message.content.startsWith(prefix + 'dp')) {
     const user = message.mentions.users.first() || message.author;
     const avatarEmbed = new RichEmbed()
-        .setTitle('Oke. foto profil telah di-ambil.')
-        .setColor(0xfcf594)
-        .setImage(user.avatarURL);
+    .setTitle('Oke. foto profil telah di-ambil.')
+    .setColor(0xfcf594)
+    .setImage(user.avatarURL);
     message.channel.send(avatarEmbed);
-}
+  }
 
-    if (msg.startsWith(prefix + 'cuaca')) {
+  if (msg.startsWith(prefix + 'cuaca')) {
 
-        weather.find({search: args.join(" "), degreeType: 'C'}, function(err, result) {
-            if (err) message.channel.send(err);
-            if (result === undefined || result.length === 0) {
-                message.channel.send('**Lokasi tidak ditemukan!**')
-                return;
-            }
+    weather.find({search: args.join(" "), degreeType: 'C'}, function(err, result) {
+      if (err) message.channel.send(err);
+      if (result === undefined || result.length === 0) {
+        message.channel.send('**Lokasi tidak ditemukan!**')
+        return;
+      }
 
-            var location = result[0].location;
-            var current = result[0].current;
+      var location = result[0].location;
+      var current = result[0].current;
 
-        switch(current.skytext){
-            case "Mostly Sunny":
-            var skytext = "Hampir cerah";
-            break;
-            case "Cloudy" :
-            var skytext = "Berawan";
-            break;
-            case "Partly Cloudy":
-            var skytext = "Cerah dan berawan";
-            break;
-            case "Sunny":
-            var skytext = "Cerah";
-            break;
-            case "Clear" :
-            var skytext = "Cerah";
-            break;
-            case "Mostly Clear":
-            var skytext = "Hampir Cerah";
-            break;
-            case "Mostly Cloudy":
-            var skytext = "Hampir mendung";
-            break;
-            case "Partly Sunny":
-            var skytext = "Cerah sebagian";
-            break;
-            case "Light Rain":
-            var skytext = "Hujan Ringan";
-            break;
-            default:
-            var skytext = current.skytext;
-            break
-          }
+      switch(current.skytext){
+        case "Mostly Sunny":
+        var skytext = "Hampir cerah";
+        break;
+        case "Cloudy" :
+        var skytext = "Berawan";
+        break;
+        case "Partly Cloudy":
+        var skytext = "Cerah dan berawan";
+        break;
+        case "Sunny":
+        var skytext = "Cerah";
+        break;
+        case "Clear" :
+        var skytext = "Cerah";
+        break;
+        case "Mostly Clear":
+        var skytext = "Hampir Cerah";
+        break;
+        case "Mostly Cloudy":
+        var skytext = "Hampir mendung";
+        break;
+        case "Partly Sunny":
+        var skytext = "Cerah sebagian";
+        break;
+        case "Light Rain":
+        var skytext = "Hujan Ringan";
+        break;
+        default:
+        var skytext = current.skytext;
+        break
+      }
 
-            const embed = new RichEmbed()
-                .setDescription('**' + skytext + '**')
-                .setAuthor(`Cuaca untuk daerah ${current.observationpoint} pada ${current.date}`)
-                .setThumbnail(current.imageUrl)
-                .setColor(0xff7da5)
-                .addField('Waktu bagian',`UTC${location.timezone}`, true)
-                .addField('Jenis derajat',location.degreetype, true)
-                .addField('Suhu',`${current.temperature}℃`, true)
-                .addField('Terasa seperti', `${current.feelslike}℃`, true)
-                .addField('Kecepatan angin',`${current.winddisplay}`, true)
-                .addField('Kelembapan', `${current.humidity}%`, true)
-                message.channel.send({embed});
-        });
-    }
+      const embed = new RichEmbed()
+      .setDescription('**' + skytext + '**')
+      .setAuthor(`Cuaca untuk daerah ${current.observationpoint} pada ${current.date}`)
+      .setThumbnail(current.imageUrl)
+      .setColor(0xff7da5)
+      .addField('Waktu bagian',`UTC${location.timezone}`, true)
+      .addField('Jenis derajat',location.degreetype, true)
+      .addField('Suhu',`${current.temperature}℃`, true)
+      .addField('Terasa seperti', `${current.feelslike}℃`, true)
+      .addField('Kecepatan angin',`${current.winddisplay}`, true)
+      .addField('Kelembapan', `${current.humidity}%`, true)
+      message.channel.send({embed});
+    });
+  }
 
-    if (msg.startsWith(prefix + 'gambar')) {
-        image(message, parts);
-    }
+  if (msg.startsWith(prefix + 'gambar')) {
+    image(message, parts);
+  }
 
-    function image(message, parts) {
+  function image(message, parts) {
     var search = parts.slice(1).join(" ");
     var options = {
-        url: "http://results.dogpile.com/serp?qc=images&q=" + search,
-        method: "GET",
-        headers: {
-            "Accept": "text/html",
-            "User-Agent": "Chrome"
-        }
+      url: "http://results.dogpile.com/serp?qc=images&q=" + search,
+      method: "GET",
+      headers: {
+        "Accept": "text/html",
+        "User-Agent": "Chrome"
+      }
     };
     request(options, function(error, response, responseBody) {
-        if (error) {
-            return;
-        }
+      if (error) {
+        return;
+      }
 
-        $ = cheerio.load(responseBody);
-        var links = $(".image a.link");
-        var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
-        console.log(urls);
-        if (!urls.length) {
-            return;
-        }
-        message.channel.send( urls[0] );
-        const embed = new RichEmbed()
-        .setTitle('Gambar yg dimaksud telah ditemukan!')
-        .setColor(0x538898)
-        message.channel.send(embed);
+      $ = cheerio.load(responseBody);
+      var links = $(".image a.link");
+      var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
+      console.log(urls);
+      if (!urls.length) {
+        return;
+      }
+      message.channel.send( urls[0] );
+      const embed = new RichEmbed()
+      .setTitle('Gambar yg dimaksud telah ditemukan!')
+      .setColor(0x538898)
+      message.channel.send(embed);
     });
-}
+  }
 
-if (msg.startsWith(prefix + 'help')) {
-   const embed = new RichEmbed()
-     .setTitle('📎 Daftar perintah yang tersedia: 📎')
-     .setColor(0xff7a8a)
-     .setImage("https://media.giphy.com/media/3otPorHw3EPYIxhw40/giphy.gif")
-     .addField('>ping', 'Untuk mengecek status ping aku.')
-     .addField('>dp', 'Untuk mengunduh avatar seseorang.')
-     .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
-     .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
-     .addField('>help', 'Untuk menampilkan pesan ini.')
-     .setFooter('Dikembangkan oleh zephyrxj 🤓');
-     message.channel.send(embed);
- }
+  if (msg.startsWith(prefix + 'help')) {
+    const embed = new RichEmbed()
+    .setTitle('📎 Daftar perintah yang tersedia: 📎')
+    .setColor(0xff7a8a)
+    .setImage("https://media.giphy.com/media/3otPorHw3EPYIxhw40/giphy.gif")
+    .addField('>ping', 'Untuk mengecek status ping aku.')
+    .addField('>dp [username]', 'Untuk mengunduh avatar seseorang.')
+    .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
+    .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
+    .addField('>help', 'Untuk menampilkan pesan ini.')
+    .setFooter('Dikembangkan oleh zephyrxj 🤓');
+    message.channel.send(embed);
+  }
 
 });
