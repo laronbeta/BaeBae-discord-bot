@@ -107,6 +107,21 @@ client.on('message', message => {
     }
   }
 
+
+  if (message.isMentioned(client.user)) {
+      const embed = new RichEmbed()
+      .setTitle('Ada apa? Ketik ">help" untuk menampilkan daftar perintah aku.')
+      .setColor(0x42f5ef)
+      message.channel.send(embed);
+}
+
+  if (msg.startsWith('<@257474897398333440>')) {
+      const embed = new RichEmbed()
+      .setTitle('Pacar saya jgn di-mention!')
+      .setColor(0xc2ff3d)
+      message.channel.send(embed);
+  }
+
   if (msg.startsWith(prefix + 'ping')) {
     const embed = new RichEmbed()
     .setTitle('PONG 🏓')
