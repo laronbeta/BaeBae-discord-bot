@@ -210,10 +210,11 @@ client.on('message', message => {
       if (!urls.length) {
         return;
       }
-      message.channel.send( urls[0] );
+      message.channel.send();
       const embed = new RichEmbed()
       .setTitle('Gambar yg dimaksud telah ditemukan!')
       .setColor(0x538898)
+      .setImage( urls[0] )
       message.channel.send(embed);
     });
   }
