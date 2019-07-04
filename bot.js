@@ -23,7 +23,7 @@ client.login(process.env.TOKEN);
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
   client.user.setStatus('IDLE', 'Made by zephyrxj')
-  client.user.setActivity('Kim Jisoo 💘', {type: 'watching' })
+  client.user.setActivity('with zephyrxj', {type: 'playing' })
 });
 
 
@@ -126,7 +126,7 @@ client.on('message', message => {
     const embed = new RichEmbed()
     .setTitle('PONG 🏓')
     .setColor(0x28c3d4)
-    .setDescription("Ping: " + Math.round(client.ping) + ' ms')
+    .setDescription("Latency: " + Math.round(client.ping) + ' ms')
     message.channel.send(embed);
   }
 
