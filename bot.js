@@ -52,7 +52,7 @@ client.on("guildCreate", guild => {
 
   let channel = client.channels.get(guild.systemChannelID || channelID);
   const embed = new RichEmbed()
-  .setTitle("Annyeonghaseyo, terima kasih telah mengundang saya ke server ini 💖")
+  .setTitle("Annyeonghaseyo, terima kasih telah mengundang aku ke server ini 💖")
   .setColor(0xff487e)
   .setImage("https://media.giphy.com/media/Cmr1OMJ2FN0B2/giphy.gif");
   channel.send(embed);
@@ -72,7 +72,7 @@ client.on("guildCreate", guild => {
 
   let channel = client.channels.get(guild.systemChannelID || channelID);
   const embed = new RichEmbed()
-  .setTitle("Ketik =help untuk menampilkan daftar perintah.")
+  .setTitle("Ketik >help untuk menampilkan daftar perintah.")
   .setColor(0xff487e)
   channel.send(embed);
 });
