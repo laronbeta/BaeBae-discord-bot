@@ -3,11 +3,14 @@ const weather = require('weather-js');
 const client = new Client();
 const prefix = '>'
 
+const youtube = require("./youtube")
+const ytdl = require("ytdl-core");
+
 const http = require('http');
 const express = require('express');
 const app = express();
 app.get("/", (request, response) => {
-  console.log(Date.now() + " Ping Received");
+  console.log(Date.now() + "Saya di sini!");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
@@ -22,13 +25,13 @@ client.login(process.env.TOKEN);
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
-  client.user.setStatus('IDLE', 'Made by zephyrxj')
-  client.user.setActivity('with zephyrxj', {type: 'playing' })
+  client.user.setStatus('IDLE', 'Made by Prometheus지수')
+  client.user.setActivity('petak umpet', {type: 'playing' })
 });
 
 
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find(ch => ch.name === 'general');
+  const channel = member.guild.channels.find(ch => ch.name === 'chit-chat');
   let memberTag = member.user.username;
   if (!channel) return;
   const embed = new RichEmbed()
@@ -83,7 +86,32 @@ client.on('message', message => {
   let args = cont.slice(1);
   let msg = message.content;
   var parts = message.content.split(" ");
+  
+  if (message.content.startsWith(prefix + "play")){
+    const streamOptions = { seek: 0, volume: 1};
+    var searchTerm = message.content.split(/\s+/g).splice(1,message.content.length).join(" ");
+    youtube.youtubeSearch(searchTerm, (vidLink) => {
+      message.channel.send("https://www.youtube.com/watch?v=" + vidLink);
+      var vidURL = "https://www.youtube.com/watch?v=" + vidLink;
 
+      var stream = ytdl(vidURL, {filter: 'audioonly'});
+      if (message.guild.channels.find("name","Karaoke") === null) {
+            const channel = message.member.voiceChannel;
+            channel.join()
+              .then((connection) => {
+                connection.playStream(stream,streamOptions);
+              })
+      } else {
+        const channel = message.member.voiceChannel;
+        channel.join()
+          .then((connection) => {
+            connection.playStream(stream,streamOptions);
+          })
+      }
+    });
+  }
+  
+  
   if (msg.startsWith(prefix + 'masuk')) {
     const channel = message.member.voiceChannel;
     channel.join()
@@ -110,14 +138,14 @@ client.on('message', message => {
 
   if (message.isMentioned(client.user)) {
       const embed = new RichEmbed()
-      .setTitle('Ada apa? Ketik ">help" untuk menampilkan daftar perintah aku.')
+      .setTitle('Ketik >help untuk info lebih lanjut.')
       .setColor(0x42f5ef)
       message.channel.send(embed);
 }
 
   if (msg.startsWith('<@257474897398333440>')) {
       const embed = new RichEmbed()
-      .setTitle('Pacar saya jgn di-mention!')
+      .setTitle('Orang tersebut tidak dapat di-mention, mohon langsung hubungi beliau saja.')
       .setColor(0xc2ff3d)
       message.channel.send(embed);
   }
@@ -178,6 +206,9 @@ client.on('message', message => {
         break;
         case "Light Rain":
         var skytext = "Hujan Ringan";
+        break;
+        case "Haze":
+        var skytext = "Berkabut";
         break;
         default:
         var skytext = current.skytext;
@@ -244,7 +275,7 @@ client.on('message', message => {
     .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
     .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
     .addField('>help', 'Untuk menampilkan pesan ini.')
-    .setFooter('Dikembangkan oleh zephyrxj 🤓');
+    .setFooter('Dikembangkan oleh Prometheus지수 🤓');
     message.channel.send(embed);
   }
 
