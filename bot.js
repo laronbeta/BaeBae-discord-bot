@@ -196,7 +196,7 @@ client.on('message', message => {
         var skytext = "Cerah";
         break;
         case "Mostly Clear":
-        var skytext = "Hampir Cerah";
+        var skytext = "Hampir cerah";
         break;
         case "Mostly Cloudy":
         var skytext = "Hampir mendung";
@@ -205,7 +205,7 @@ client.on('message', message => {
         var skytext = "Cerah sebagian";
         break;
         case "Light Rain":
-        var skytext = "Hujan Ringan";
+        var skytext = "Hujan ringan";
         break;
         case "Haze":
         var skytext = "Berkabut";
