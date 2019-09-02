@@ -25,8 +25,8 @@ client.login(process.env.TOKEN);
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
-  client.user.setStatus('IDLE', 'Made by Prometheus지수')
-  client.user.setActivity('petak umpet', {type: 'playing' })
+  client.user.setStatus('IDLE', 'Made by Pr0metheus')
+  client.user.setActivity('Left 4 Dead 2', {type: 'playing' })
 });
 
 
@@ -158,6 +158,14 @@ client.on('message', message => {
     message.channel.send(embed);
   }
 
+  if (msg.startsWith(prefix + 'sumber')) {
+    const embed = new RichEmbed()
+    .setTitle('Source code 🔗')
+    .setColor(0x28c3d4)
+    .setDescription("https://github.com/rnldch/pr0metheus-bot")
+    message.channel.send(embed);
+  }
+  
   if (message.content.startsWith(prefix + 'dp')) {
     const user = message.mentions.users.first() || message.author;
     const avatarEmbed = new RichEmbed()
@@ -196,7 +204,7 @@ client.on('message', message => {
         var skytext = "Cerah";
         break;
         case "Mostly Clear":
-        var skytext = "Hampir cerah";
+        var skytext = "Hampir Cerah";
         break;
         case "Mostly Cloudy":
         var skytext = "Hampir mendung";
@@ -205,7 +213,7 @@ client.on('message', message => {
         var skytext = "Cerah sebagian";
         break;
         case "Light Rain":
-        var skytext = "Hujan ringan";
+        var skytext = "Hujan Ringan";
         break;
         case "Haze":
         var skytext = "Berkabut";
@@ -275,7 +283,7 @@ client.on('message', message => {
     .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
     .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
     .addField('>help', 'Untuk menampilkan pesan ini.')
-    .setFooter('Dikembangkan oleh Prometheus지수 🤓');
+    .setFooter('Dikembangkan oleh Pr0metheus');
     message.channel.send(embed);
   }
 
