@@ -282,6 +282,7 @@ client.on('message', message => {
     .addField('>dp [username]', 'Untuk mengunduh avatar seseorang.')
     .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
     .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
+    .addField('>sumber', 'Untuk melihat kode sumber aku.')
     .addField('>help', 'Untuk menampilkan pesan ini.')
     .setFooter('Dikembangkan oleh Pr0metheus');
     message.channel.send(embed);
