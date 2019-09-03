@@ -1,5 +1,5 @@
 # Useless discord bot
-Made with Javascript and hosted in [Glitch](https://glitch.com)
+Made with Javascript and currently hosted in [Glitch](https://glitch.com)
 
 
 # The Features:
