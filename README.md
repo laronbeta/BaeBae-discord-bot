@@ -1,4 +1,4 @@
-# Useless discord bot
+# Pr0metheus discord bot
 Made with Javascript and ❤️. Currently hosted in [Glitch](https://glitch.com)
 
 
