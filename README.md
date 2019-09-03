@@ -1,5 +1,5 @@
 # Useless discord bot
-Hmm okay this bot is purely kangs from others bot, so whats ur problem?
+Made with Javascript and hosted in glitch.com
 
 
 # The Features:
