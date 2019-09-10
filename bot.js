@@ -26,7 +26,7 @@ client.login(process.env.TOKEN);
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
   client.user.setStatus('IDLE', 'Made by Pr0metheus')
-  client.user.setActivity('Left 4 Dead 2', {type: 'playing' })
+  client.user.setActivity('Grand Theft Auto V', {type: 'playing' })
 });
 
 
@@ -162,7 +162,7 @@ client.on('message', message => {
     const embed = new RichEmbed()
     .setTitle('Source code 🔗')
     .setColor(0x28c3d4)
-    .setDescription("https://github.com/rnldch/pr0metheus-bot")
+    .setDescription("https://github.com/rnldch/aprometheus-bot")
     message.channel.send(embed);
   }
   
@@ -284,7 +284,7 @@ client.on('message', message => {
     .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
     .addField('>sumber', 'Untuk melihat kode sumber aku.')
     .addField('>help', 'Untuk menampilkan pesan ini.')
-    .setFooter('Dikembangkan oleh Pr0metheus');
+    .setFooter('Dikembangkan oleh 𝚊𝚙𝚛𝚘𝚖𝚎𝚝𝚑𝚎𝚞𝚜');
     message.channel.send(embed);
   }
 
