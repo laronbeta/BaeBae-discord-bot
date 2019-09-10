@@ -1,8 +1,8 @@
-# Useless discord bot
-Hmm okay this bot is purely kangs from others bot, so whats ur problem?
+# Aprometheus discord bot
+Made with Javascript and ❤️. Currently hosted in [Glitch](https://glitch.com)
 
 
 # The Features:
 1. Weather info;
-2. Dogpile Image search (i knew thats retard search engine, but easy to commit);
+2. Dogpile Image search;
 3. Grab your own avatar.
