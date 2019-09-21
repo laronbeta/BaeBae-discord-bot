@@ -25,8 +25,8 @@ client.login(process.env.TOKEN);
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
-  client.user.setStatus('IDLE', 'Made by Pr0metheus')
-  client.user.setActivity('Grand Theft Auto V', {type: 'playing' })
+  client.user.setStatus('IDLE', 'Made by deprometheus')
+  client.user.setActivity('Spotify', {type: 'listening' })
 });
 
 
@@ -113,15 +113,17 @@ client.on('message', message => {
   
   
   if (msg.startsWith(prefix + 'masuk')) {
-    const channel = message.member.voiceChannel;
-    channel.join()
-    .then(connection => console.log('Berhasil masuk ke channel!'))
-    .catch(console.error);
+    if (message.guild.me.voiceChannel !== undefined) {
+    const channel = message.member.voiceChannel
+    channel.join();
     const embed = new RichEmbed()
     .setTitle('OK. Aku masuk ya!')
     .setColor(0x009975)
-    message.channel.send(embed);
-  }
+    message.channel.send(embed)
+  } else {
+      message.reply("Masuk ke voice channel dulu!");
+    }
+  }  
 
   if (msg.startsWith(prefix + 'keluar')) {
     if (message.guild.me.voiceChannel !== undefined) {
@@ -135,7 +137,6 @@ client.on('message', message => {
     }
   }
 
-
   if (message.isMentioned(client.user)) {
       const embed = new RichEmbed()
       .setTitle('Ketik >help untuk info lebih lanjut.')
@@ -143,11 +144,14 @@ client.on('message', message => {
       message.channel.send(embed);
 }
 
-  if (msg.startsWith('<@257474897398333440>')) {
-      const embed = new RichEmbed()
-      .setTitle('Orang tersebut tidak dapat di-mention, mohon langsung hubungi beliau saja.')
-      .setColor(0xc2ff3d)
-      message.channel.send(embed);
+  if (msg.startsWith(message.mentions.users.first())) {
+    var link = "http://discordapp.com/channels/" + message.guild.id + "/" + message.channel.id + "/" + message.id;
+    message.mentions.users.first().sendMessage("Hai, kamu di-mention di suatu server")
+    const embed = new RichEmbed()
+    .setColor(0xff0000)
+    .setDescription("[Klik di sini untuk menuju ke pesannya]" + '(' + (link) + ')')
+    message.mentions.users.first().sendMessage(embed);
+    message.channel.send("Pesan telah di-kirim!")
   }
 
   if (msg.startsWith(prefix + 'ping')) {
@@ -162,7 +166,7 @@ client.on('message', message => {
     const embed = new RichEmbed()
     .setTitle('Source code 🔗')
     .setColor(0x28c3d4)
-    .setDescription("https://github.com/rnldch/aprometheus-bot")
+    .setDescription("https://github.com/rnldch/deprometheus-bot")
     message.channel.send(embed);
   }
   
@@ -283,8 +287,9 @@ client.on('message', message => {
     .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
     .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
     .addField('>sumber', 'Untuk melihat kode sumber aku.')
+    .addField('@username', 'Untuk memberitahu user yg di-mention.')
     .addField('>help', 'Untuk menampilkan pesan ini.')
-    .setFooter('Dikembangkan oleh 𝚊𝚙𝚛𝚘𝚖𝚎𝚝𝚑𝚎𝚞𝚜');
+    .setFooter('Dikembangkan oleh 𝚍𝚎𝚙𝚛𝚘𝚖𝚎𝚝𝚑𝚎𝚞𝚜');
     message.channel.send(embed);
   }
 
