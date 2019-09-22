@@ -26,7 +26,7 @@ client.login(process.env.TOKEN);
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
   client.user.setStatus('IDLE', 'Made by deprometheus')
-  client.user.setActivity('Spotify', {type: 'listening' })
+  client.user.setActivity('VLIVE', {type: 'Watching' })
 });
 
 
@@ -111,6 +111,31 @@ client.on('message', message => {
     });
   }
   
+   if (message.content.startsWith(prefix + 'kick')) {
+
+  if (!message.member.roles.find("name", "Admin"))
+        return;
+    var member = message.mentions.members.first();
+    member.kick().then((member) => {
+        message.channel.send(member.displayName + " telah di-kick!");
+    }).catch(() => {
+        message.channel.send("Akses ditolak!");
+    });
+}
+
+    if (message.content.startsWith(prefix + 'ban')) {
+
+  if (!message.member.roles.find("name", "Admin"))
+            return;
+        var member = message.mentions.members.first();
+        member.ban().then((member) => {
+            message.channel.send(member.displayName + " telah di-banned!");
+        }).catch(() => {
+            message.channel.send("Akses ditolak!");
+        });
+    }
+
+
   
   if (msg.startsWith(prefix + 'masuk')) {
     if (message.guild.me.voiceChannel !== undefined) {
@@ -146,11 +171,11 @@ client.on('message', message => {
 
   if (msg.startsWith(message.mentions.users.first())) {
     var link = "http://discordapp.com/channels/" + message.guild.id + "/" + message.channel.id + "/" + message.id;
-    message.mentions.users.first().sendMessage("Hai, kamu di-mention di suatu server")
+    message.mentions.users.first().send("Hai, kamu di-mention di suatu server")
     const embed = new RichEmbed()
     .setColor(0xff0000)
     .setDescription("[Klik di sini untuk menuju ke pesannya]" + '(' + (link) + ')')
-    message.mentions.users.first().sendMessage(embed);
+    message.mentions.users.first().send(embed);
     message.channel.send("Pesan telah di-kirim!")
   }
 
@@ -281,7 +306,7 @@ client.on('message', message => {
     const embed = new RichEmbed()
     .setTitle('📎 Daftar perintah yang tersedia: 📎')
     .setColor(0xff7a8a)
-    .setImage("https://media.giphy.com/media/3otPorHw3EPYIxhw40/giphy.gif")
+    .setImage("https://media1.tenor.com/images/0cd749fc22abb81da288cf99d6c4a870/tenor.gif?itemid=10720121")
     .addField('>ping', 'Untuk mengecek status ping aku.')
     .addField('>dp [username]', 'Untuk mengunduh avatar seseorang.')
     .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
