@@ -26,7 +26,7 @@ client.login(process.env.TOKEN);
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
   client.user.setStatus('IDLE', 'Made by deprometheus')
-  client.user.setActivity('VLIVE', {type: 'Watching' })
+  client.user.setActivity('BLACKPINK', {type: 'Watching' })
 });
 
 
@@ -113,7 +113,7 @@ client.on('message', message => {
   
    if (message.content.startsWith(prefix + 'kick')) {
 
-  if (!message.member.roles.find("name", "Admin"))
+  if (!message.member.roles.find("name", "Admin", "Staff"))
         return;
     var member = message.mentions.members.first();
     member.kick().then((member) => {
@@ -125,7 +125,7 @@ client.on('message', message => {
 
     if (message.content.startsWith(prefix + 'ban')) {
 
-  if (!message.member.roles.find("name", "Admin"))
+  if (!message.member.roles.find("name", "Admin", "Staff"))
             return;
         var member = message.mentions.members.first();
         member.ban().then((member) => {
@@ -171,19 +171,18 @@ client.on('message', message => {
 
   if (msg.startsWith(message.mentions.users.first())) {
     var link = "http://discordapp.com/channels/" + message.guild.id + "/" + message.channel.id + "/" + message.id;
-    message.mentions.users.first().send("Hai, kamu di-mention di suatu server")
     const embed = new RichEmbed()
     .setColor(0xff0000)
+    .setTitle("Hai! Kamu telah di-mention di suatu server.")
     .setDescription("[Klik di sini untuk menuju ke pesannya]" + '(' + (link) + ')')
     message.mentions.users.first().send(embed);
-    message.channel.send("Pesan telah di-kirim!")
   }
 
   if (msg.startsWith(prefix + 'ping')) {
     const embed = new RichEmbed()
     .setTitle('PONG 🏓')
     .setColor(0x28c3d4)
-    .setDescription("Latency: " + Math.round(client.ping) + ' ms')
+    .setDescription(`Latency: \`${client.pings[0]}ms\``)
     message.channel.send(embed);
   }
 
@@ -192,6 +191,14 @@ client.on('message', message => {
     .setTitle('Source code 🔗')
     .setColor(0x28c3d4)
     .setDescription("https://github.com/rnldch/deprometheus-bot")
+    message.channel.send(embed);
+  }
+  
+   if (msg.startsWith(prefix + 'invite')) {
+    const embed = new RichEmbed()
+    .setTitle('Official link')
+    .setColor(0x28c3d4)
+    .setDescription("https://auxidesynd.github.io/")
     message.channel.send(embed);
   }
   
@@ -251,7 +258,8 @@ client.on('message', message => {
         var skytext = current.skytext;
         break
       }
-
+      
+      
       const embed = new RichEmbed()
       .setDescription('**' + skytext + '**')
       .setAuthor(`Cuaca untuk daerah ${current.observationpoint} pada ${current.date}`)
