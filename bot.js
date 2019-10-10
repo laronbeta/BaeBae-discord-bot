@@ -196,7 +196,7 @@ client.on('message', message => {
   
    if (msg.startsWith(prefix + 'invite')) {
     const embed = new RichEmbed()
-    .setTitle('Official link')
+    .setTitle('Tautan resmi server Auxide.')
     .setColor(0x28c3d4)
     .setDescription("https://auxidesynd.github.io/")
     message.channel.send(embed);
@@ -205,7 +205,7 @@ client.on('message', message => {
   if (message.content.startsWith(prefix + 'dp')) {
     const user = message.mentions.users.first() || message.author;
     const avatarEmbed = new RichEmbed()
-    .setTitle('Oke. foto profil telah di-ambil.')
+    .setTitle('Oke. Foto profil telah di-ambil.')
     .setColor(0xfcf594)
     .setImage(user.avatarURL);
     message.channel.send(avatarEmbed);
@@ -320,6 +320,7 @@ client.on('message', message => {
     .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
     .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
     .addField('>sumber', 'Untuk melihat kode sumber aku.')
+    .addField('>invite', 'Untuk menampilkan tautan undangan ke server resmi Auxide.')
     .addField('@username', 'Untuk memberitahu user yg di-mention.')
     .addField('>help', 'Untuk menampilkan pesan ini.')
     .setFooter('Dikembangkan oleh 𝚍𝚎𝚙𝚛𝚘𝚖𝚎𝚝𝚑𝚎𝚞𝚜');
