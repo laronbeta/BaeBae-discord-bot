@@ -1,4 +1,4 @@
-# Deprometheus discord bot
+# Simple discord bot
 Made with Javascript and ❤️. Currently hosted in [Glitch](https://glitch.com)
 
 
