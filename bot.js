@@ -3,6 +3,8 @@ const weather = require('weather-js');
 const client = new Client();
 const prefix = '>'
 
+
+
 const youtube = require("./youtube")
 const ytdl = require("ytdl-core");
 
@@ -25,21 +27,38 @@ client.login(process.env.TOKEN);
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
-  client.user.setStatus('IDLE', 'Made by deprometheus')
-  client.user.setActivity('BLACKPINK', {type: 'Watching' })
+  client.user.setStatus('IDLE', 'Made by rnldch')
+  client.user.setActivity("someone i can't have", {type: 'Watching' })
 });
 
+  
+  client.on('guildMemberAdd', member => {
+  const channel = member.guild.channels.find(ch => ch.name === 'chit-chat');
+  let memberTag = member.user.username;
+  if (!channel) return;
+  var role = member.guild.roles.find ("name", "Member");
+  member.addRole (role);
+  const embed = new RichEmbed()
+  .setTitle( memberTag + ' telah bergabung ke dalam server.')
+  .setColor(0x03f8fc)
+  channel.send(embed);
+  setTimeout (function () {
+  channel.send(`Hai ${member}, selamat datang di server ini 👋`)
+  }, 1000); 
+  });
 
-client.on('guildMemberAdd', member => {
+  client.on('guildMemberRemove', member => {
   const channel = member.guild.channels.find(ch => ch.name === 'chit-chat');
   let memberTag = member.user.username;
   if (!channel) return;
   const embed = new RichEmbed()
-  .setTitle("Annyeonghaseyo " + memberTag + ', selamat datang di server kami 💖')
-  .setColor(0xc4005a)
-  .setImage("https://media.giphy.com/media/Cmr1OMJ2FN0B2/giphy.gif");
+  .setTitle( memberTag + ' telah meninggalkan server.')
+  .setColor(0xff0000)
   channel.send(embed);
-});
+  setTimeout (function () {
+  channel.send(`Selamat tinggal ${member}, semoga tenang di alamnya 👋`)
+  }, 1000); 
+  });
 
 client.on("guildCreate", guild => {
   let channelID;
@@ -55,9 +74,8 @@ client.on("guildCreate", guild => {
 
   let channel = client.channels.get(guild.systemChannelID || channelID);
   const embed = new RichEmbed()
-  .setTitle("Annyeonghaseyo, terima kasih telah mengundang aku ke server ini 💖")
-  .setColor(0xff487e)
-  .setImage("https://media.giphy.com/media/Cmr1OMJ2FN0B2/giphy.gif");
+  .setTitle("Hai, terima kasih telah mengundang saya ke server ini.")
+  .setColor(0x03f8fc)
   channel.send(embed);
 });
 
@@ -154,11 +172,11 @@ client.on('message', message => {
     if (message.guild.me.voiceChannel !== undefined) {
       message.guild.me.voiceChannel.leave();
       const embed = new RichEmbed()
-      .setTitle('OK. Aku keluar!')
+      .setTitle('OK. Saya keluar!')
       .setColor(0x009975)
       message.channel.send(embed);
     } else {
-      message.reply("Aku tidak ada di channel itu!");
+      message.reply("Saya tidak ada di channel itu!");
     }
   }
 
@@ -173,7 +191,7 @@ client.on('message', message => {
     var link = "http://discordapp.com/channels/" + message.guild.id + "/" + message.channel.id + "/" + message.id;
     const embed = new RichEmbed()
     .setColor(0xff0000)
-    .setTitle("Hai! Kamu telah di-mention di suatu server.")
+    .setTitle("Hai! Anda telah di-mention di suatu server.")
     .setDescription("[Klik di sini untuk menuju ke pesannya]" + '(' + (link) + ')')
     message.mentions.users.first().send(embed);
   }
@@ -189,7 +207,7 @@ client.on('message', message => {
   if (msg.startsWith(prefix + 'sumber')) {
     const embed = new RichEmbed()
     .setTitle('Source code 🔗')
-    .setColor(0x28c3d4)
+    .setColor(0x03f8fc)
     .setDescription("https://github.com/rnldch/deprometheus-bot")
     message.channel.send(embed);
   }
@@ -197,7 +215,7 @@ client.on('message', message => {
    if (msg.startsWith(prefix + 'invite')) {
     const embed = new RichEmbed()
     .setTitle('Tautan resmi server Auxide.')
-    .setColor(0x28c3d4)
+    .setColor(0x03f8fc)
     .setDescription("https://auxidesynd.github.io/")
     message.channel.send(embed);
   }
@@ -206,7 +224,7 @@ client.on('message', message => {
     const user = message.mentions.users.first() || message.author;
     const avatarEmbed = new RichEmbed()
     .setTitle('Oke. Foto profil telah di-ambil.')
-    .setColor(0xfcf594)
+    .setColor(0x03f8fc)
     .setImage(user.avatarURL);
     message.channel.send(avatarEmbed);
   }
@@ -264,7 +282,7 @@ client.on('message', message => {
       .setDescription('**' + skytext + '**')
       .setAuthor(`Cuaca untuk daerah ${current.observationpoint} pada ${current.date}`)
       .setThumbnail(current.imageUrl)
-      .setColor(0xff7da5)
+      .setColor(0x03f8fc)
       .addField('Waktu bagian',`UTC${location.timezone}`, true)
       .addField('Jenis derajat',location.degreetype, true)
       .addField('Suhu',`${current.temperature}℃`, true)
@@ -304,7 +322,7 @@ client.on('message', message => {
       message.channel.send();
       const embed = new RichEmbed()
       .setTitle('Gambar yg dimaksud telah ditemukan!')
-      .setColor(0x538898)
+      .setColor(0x03f8fc)
       .setImage( urls[0] )
       message.channel.send(embed);
     });
@@ -313,17 +331,17 @@ client.on('message', message => {
   if (msg.startsWith(prefix + 'help')) {
     const embed = new RichEmbed()
     .setTitle('📎 Daftar perintah yang tersedia: 📎')
-    .setColor(0xff7a8a)
-    .setImage("https://media1.tenor.com/images/0cd749fc22abb81da288cf99d6c4a870/tenor.gif?itemid=10720121")
-    .addField('>ping', 'Untuk mengecek status ping aku.')
+    .setColor(0x03f8fc)
+    .setThumbnail('https://i.ibb.co/cFNrRCG/dpaux2-01.png')
+    .addField('>ping', 'Untuk mengecek status ping anda.')
     .addField('>dp [username]', 'Untuk mengunduh avatar seseorang.')
-    .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota kamu.')
-    .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin kamu cari.')
-    .addField('>sumber', 'Untuk melihat kode sumber aku.')
+    .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota anda.')
+    .addField('>gambar [objek]', 'Untuk menampilkan gambar yg ingin anda cari.')
+    .addField('>sumber', 'Untuk melihat kode sumber bot ini.')
     .addField('>invite', 'Untuk menampilkan tautan undangan ke server resmi Auxide.')
-    .addField('@username', 'Untuk memberitahu user yg di-mention.')
+    .addField('@username', 'Untuk memberitahu user yang di-mention.')
     .addField('>help', 'Untuk menampilkan pesan ini.')
-    .setFooter('Dikembangkan oleh 𝚍𝚎𝚙𝚛𝚘𝚖𝚎𝚝𝚑𝚎𝚞𝚜');
+    .setFooter('Dikembangkan oleh rnldch');
     message.channel.send(embed);
   }
 
