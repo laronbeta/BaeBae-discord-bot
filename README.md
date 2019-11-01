@@ -1,4 +1,4 @@
-# Simple Discord Bot
+# AuxideHelper Discord Bot
 Made with Javascript and ❤️. Currently hosted in [Glitch](https://glitch.com)
 
 
