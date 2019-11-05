@@ -1,4 +1,4 @@
-# AuxideHelper Discord Bot
+# BaeBae Discord Bot
 Made with Javascript and ❤️. Currently hosted in [Glitch](https://glitch.com)
 
 
