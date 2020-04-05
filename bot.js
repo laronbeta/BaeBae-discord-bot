@@ -1,1 +1,323 @@
-var _0x571a=["\x64\x69\x73\x63\x6F\x72\x64\x2E\x6A\x73","\x77\x65\x61\x74\x68\x65\x72\x2D\x6A\x73","\x3E","\x2E\x2F\x79\x6F\x75\x74\x75\x62\x65","\x79\x74\x64\x6C\x2D\x63\x6F\x72\x65","\x68\x74\x74\x70","\x65\x78\x70\x72\x65\x73\x73","\x2F","\x6E\x6F\x77","\x53\x61\x79\x61\x20\x64\x69\x20\x73\x69\x6E\x69\x21","\x6C\x6F\x67","\x73\x65\x6E\x64\x53\x74\x61\x74\x75\x73","\x67\x65\x74","\x65\x6E\x76","\x6C\x69\x73\x74\x65\x6E","\x68\x74\x74\x70\x3A\x2F\x2F","\x50\x52\x4F\x4A\x45\x43\x54\x5F\x44\x4F\x4D\x41\x49\x4E","\x2E\x67\x6C\x69\x74\x63\x68\x2E\x6D\x65\x2F","\x63\x68\x65\x65\x72\x69\x6F","\x72\x65\x71\x75\x65\x73\x74","\x6C\x6F\x67\x69\x6E","\x72\x65\x61\x64\x79","\x4C\x6F\x67\x67\x65\x64\x20\x69\x6E\x20\x61\x73\x20","\x74\x61\x67","\x75\x73\x65\x72","\x21","\x49\x44\x4C\x45","\x4D\x61\x64\x65\x20\x62\x79\x20\x72\x6E\x6C\x64\x63\x68","\x73\x65\x74\x53\x74\x61\x74\x75\x73","\x73\x6F\x6D\x65\x6F\x6E\x65\x20\x69\x20\x63\x61\x6E\x27\x74\x20\x68\x61\x76\x65","\x57\x61\x74\x63\x68\x69\x6E\x67","\x73\x65\x74\x41\x63\x74\x69\x76\x69\x74\x79","\x6F\x6E","\x67\x75\x69\x6C\x64\x4D\x65\x6D\x62\x65\x72\x41\x64\x64","\x6E\x61\x6D\x65","\x63\x68\x69\x74\x2D\x63\x68\x61\x74","\x66\x69\x6E\x64","\x63\x68\x61\x6E\x6E\x65\x6C\x73","\x67\x75\x69\x6C\x64","\x75\x73\x65\x72\x6E\x61\x6D\x65","\x4D\x65\x6D\x62\x65\x72","\x72\x6F\x6C\x65\x73","\x61\x64\x64\x52\x6F\x6C\x65","\x73\x65\x74\x43\x6F\x6C\x6F\x72","\x20\x74\x65\x6C\x61\x68\x20\x62\x65\x72\x67\x61\x62\x75\x6E\x67\x20\x6B\x65\x20\x64\x61\x6C\x61\x6D\x20\x73\x65\x72\x76\x65\x72\x2E","\x73\x65\x74\x54\x69\x74\x6C\x65","\x73\x65\x6E\x64","\x48\x61\x69\x20","\x2C\x20\x73\x65\x6C\x61\x6D\x61\x74\x20\x64\x61\x74\x61\x6E\x67\x20\x64\x69\x20\x73\x65\x72\x76\x65\x72\x20\x69\x6E\x69\x20\uD83D\uDC4B","\x67\x75\x69\x6C\x64\x4D\x65\x6D\x62\x65\x72\x52\x65\x6D\x6F\x76\x65","\x20\x74\x65\x6C\x61\x68\x20\x6D\x65\x6E\x69\x6E\x67\x67\x61\x6C\x6B\x61\x6E\x20\x73\x65\x72\x76\x65\x72\x2E","\x53\x65\x6C\x61\x6D\x61\x74\x20\x74\x69\x6E\x67\x67\x61\x6C\x20","\x2C\x20\x73\x65\x6D\x6F\x67\x61\x20\x74\x65\x6E\x61\x6E\x67\x20\x64\x69\x20\x61\x6C\x61\x6D\x6E\x79\x61\x20\uD83D\uDC4B","\x67\x75\x69\x6C\x64\x43\x72\x65\x61\x74\x65","\x74\x79\x70\x65","\x74\x65\x78\x74","\x73\x79\x73\x74\x65\x6D\x43\x68\x61\x6E\x6E\x65\x6C\x49\x44","\x48\x61\x69\x2C\x20\x74\x65\x72\x69\x6D\x61\x20\x6B\x61\x73\x69\x68\x20\x74\x65\x6C\x61\x68\x20\x6D\x65\x6E\x67\x75\x6E\x64\x61\x6E\x67\x20\x73\x61\x79\x61\x20\x6B\x65\x20\x73\x65\x72\x76\x65\x72\x20\x69\x6E\x69\x2E","\x4B\x65\x74\x69\x6B\x20\x3E\x68\x65\x6C\x70\x20\x75\x6E\x74\x75\x6B\x20\x6D\x65\x6E\x61\x6D\x70\x69\x6C\x6B\x61\x6E\x20\x64\x61\x66\x74\x61\x72\x20\x70\x65\x72\x69\x6E\x74\x61\x68\x2E","\x6D\x65\x73\x73\x61\x67\x65","\x20","\x73\x70\x6C\x69\x74","\x6C\x65\x6E\x67\x74\x68","\x73\x6C\x69\x63\x65","\x63\x6F\x6E\x74\x65\x6E\x74","\x70\x6C\x61\x79","\x73\x74\x61\x72\x74\x73\x57\x69\x74\x68","\x6A\x6F\x69\x6E","\x73\x70\x6C\x69\x63\x65","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x79\x6F\x75\x74\x75\x62\x65\x2E\x63\x6F\x6D\x2F\x77\x61\x74\x63\x68\x3F\x76\x3D","\x63\x68\x61\x6E\x6E\x65\x6C","\x61\x75\x64\x69\x6F\x6F\x6E\x6C\x79","\x4B\x61\x72\x61\x6F\x6B\x65","\x76\x6F\x69\x63\x65\x43\x68\x61\x6E\x6E\x65\x6C","\x6D\x65\x6D\x62\x65\x72","\x70\x6C\x61\x79\x53\x74\x72\x65\x61\x6D","\x74\x68\x65\x6E","\x79\x6F\x75\x74\x75\x62\x65\x53\x65\x61\x72\x63\x68","\x6B\x69\x63\x6B","\x41\x64\x6D\x69\x6E","\x53\x74\x61\x66\x66","\x66\x69\x72\x73\x74","\x6D\x65\x6D\x62\x65\x72\x73","\x6D\x65\x6E\x74\x69\x6F\x6E\x73","\x41\x6B\x73\x65\x73\x20\x64\x69\x74\x6F\x6C\x61\x6B\x21","\x63\x61\x74\x63\x68","\x64\x69\x73\x70\x6C\x61\x79\x4E\x61\x6D\x65","\x20\x74\x65\x6C\x61\x68\x20\x64\x69\x2D\x6B\x69\x63\x6B\x21","\x62\x61\x6E","\x20\x74\x65\x6C\x61\x68\x20\x64\x69\x2D\x62\x61\x6E\x6E\x65\x64\x21","\x6D\x61\x73\x75\x6B","\x6D\x65","\x4F\x4B\x2E\x20\x41\x6B\x75\x20\x6D\x61\x73\x75\x6B\x20\x79\x61\x21","\x4D\x61\x73\x75\x6B\x20\x6B\x65\x20\x76\x6F\x69\x63\x65\x20\x63\x68\x61\x6E\x6E\x65\x6C\x20\x64\x75\x6C\x75\x21","\x72\x65\x70\x6C\x79","\x6B\x65\x6C\x75\x61\x72","\x6C\x65\x61\x76\x65","\x4F\x4B\x2E\x20\x53\x61\x79\x61\x20\x6B\x65\x6C\x75\x61\x72\x21","\x53\x61\x79\x61\x20\x74\x69\x64\x61\x6B\x20\x61\x64\x61\x20\x64\x69\x20\x63\x68\x61\x6E\x6E\x65\x6C\x20\x69\x74\x75\x21","\x69\x73\x4D\x65\x6E\x74\x69\x6F\x6E\x65\x64","\x4B\x65\x74\x69\x6B\x20\x3E\x68\x65\x6C\x70\x20\x75\x6E\x74\x75\x6B\x20\x69\x6E\x66\x6F\x20\x6C\x65\x62\x69\x68\x20\x6C\x61\x6E\x6A\x75\x74\x2E","\x75\x73\x65\x72\x73","\x68\x74\x74\x70\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x61\x70\x70\x2E\x63\x6F\x6D\x2F\x63\x68\x61\x6E\x6E\x65\x6C\x73\x2F","\x69\x64","\x5B\x4B\x6C\x69\x6B\x20\x64\x69\x20\x73\x69\x6E\x69\x20\x75\x6E\x74\x75\x6B\x20\x6D\x65\x6E\x75\x6A\x75\x20\x6B\x65\x20\x70\x65\x73\x61\x6E\x6E\x79\x61\x5D","\x28","\x29","\x73\x65\x74\x44\x65\x73\x63\x72\x69\x70\x74\x69\x6F\x6E","\x48\x61\x69\x21\x20\x41\x6E\x64\x61\x20\x74\x65\x6C\x61\x68\x20\x64\x69\x2D\x6D\x65\x6E\x74\x69\x6F\x6E\x20\x64\x69\x20\x73\x75\x61\x74\x75\x20\x73\x65\x72\x76\x65\x72\x2E","\x70\x69\x6E\x67","\x4C\x61\x74\x65\x6E\x63\x79\x3A\x20\x60","\x70\x69\x6E\x67\x73","\x6D\x73\x60","\x50\x4F\x4E\x47\x20\uD83C\uDFD3","\x73\x75\x6D\x62\x65\x72","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x69\x74\x68\x75\x62\x2E\x63\x6F\x6D\x2F\x6C\x61\x72\x6F\x6E\x62\x65\x74\x61\x2F\x61\x75\x78\x69\x64\x65\x2D\x62\x6F\x74","\x53\x6F\x75\x72\x63\x65\x20\x63\x6F\x64\x65\x20\uD83D\uDD17","\x69\x6E\x76\x69\x74\x65","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x61\x75\x78\x69\x64\x65\x73\x79\x6E\x64\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F\x2F","\x54\x61\x75\x74\x61\x6E\x20\x72\x65\x73\x6D\x69\x20\x73\x65\x72\x76\x65\x72\x20\x41\x75\x78\x69\x64\x65\x2E","\x64\x70","\x61\x75\x74\x68\x6F\x72","\x61\x76\x61\x74\x61\x72\x55\x52\x4C","\x73\x65\x74\x49\x6D\x61\x67\x65","\x4F\x6B\x65\x2E\x20\x46\x6F\x74\x6F\x20\x70\x72\x6F\x66\x69\x6C\x20\x74\x65\x6C\x61\x68\x20\x64\x69\x2D\x61\x6D\x62\x69\x6C\x2E","\x63\x75\x61\x63\x61","\x43","\x2A\x2A\x4C\x6F\x6B\x61\x73\x69\x20\x74\x69\x64\x61\x6B\x20\x64\x69\x74\x65\x6D\x75\x6B\x61\x6E\x21\x2A\x2A","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x63\x75\x72\x72\x65\x6E\x74","\x48\x61\x6D\x70\x69\x72\x20\x63\x65\x72\x61\x68","\x4D\x6F\x73\x74\x6C\x79\x20\x53\x75\x6E\x6E\x79","\x42\x65\x72\x61\x77\x61\x6E","\x43\x6C\x6F\x75\x64\x79","\x43\x65\x72\x61\x68\x20\x64\x61\x6E\x20\x62\x65\x72\x61\x77\x61\x6E","\x50\x61\x72\x74\x6C\x79\x20\x43\x6C\x6F\x75\x64\x79","\x43\x65\x72\x61\x68","\x53\x75\x6E\x6E\x79","\x43\x6C\x65\x61\x72","\x48\x61\x6D\x70\x69\x72\x20\x43\x65\x72\x61\x68","\x4D\x6F\x73\x74\x6C\x79\x20\x43\x6C\x65\x61\x72","\x48\x61\x6D\x70\x69\x72\x20\x6D\x65\x6E\x64\x75\x6E\x67","\x4D\x6F\x73\x74\x6C\x79\x20\x43\x6C\x6F\x75\x64\x79","\x43\x65\x72\x61\x68\x20\x73\x65\x62\x61\x67\x69\x61\x6E","\x50\x61\x72\x74\x6C\x79\x20\x53\x75\x6E\x6E\x79","\x48\x75\x6A\x61\x6E\x20\x52\x69\x6E\x67\x61\x6E","\x4C\x69\x67\x68\x74\x20\x52\x61\x69\x6E","\x42\x65\x72\x6B\x61\x62\x75\x74","\x48\x61\x7A\x65","\x73\x6B\x79\x74\x65\x78\x74","\x4B\x65\x6C\x65\x6D\x62\x61\x70\x61\x6E","","\x68\x75\x6D\x69\x64\x69\x74\x79","\x25","\x61\x64\x64\x46\x69\x65\x6C\x64","\x4B\x65\x63\x65\x70\x61\x74\x61\x6E\x20\x61\x6E\x67\x69\x6E","\x77\x69\x6E\x64\x64\x69\x73\x70\x6C\x61\x79","\x54\x65\x72\x61\x73\x61\x20\x73\x65\x70\x65\x72\x74\x69","\x66\x65\x65\x6C\x73\x6C\x69\x6B\x65","\u2103","\x53\x75\x68\x75","\x74\x65\x6D\x70\x65\x72\x61\x74\x75\x72\x65","\x4A\x65\x6E\x69\x73\x20\x64\x65\x72\x61\x6A\x61\x74","\x64\x65\x67\x72\x65\x65\x74\x79\x70\x65","\x57\x61\x6B\x74\x75\x20\x62\x61\x67\x69\x61\x6E","\x55\x54\x43","\x74\x69\x6D\x65\x7A\x6F\x6E\x65","\x69\x6D\x61\x67\x65\x55\x72\x6C","\x73\x65\x74\x54\x68\x75\x6D\x62\x6E\x61\x69\x6C","\x43\x75\x61\x63\x61\x20\x75\x6E\x74\x75\x6B\x20\x64\x61\x65\x72\x61\x68\x20","\x6F\x62\x73\x65\x72\x76\x61\x74\x69\x6F\x6E\x70\x6F\x69\x6E\x74","\x20\x70\x61\x64\x61\x20","\x64\x61\x74\x65","\x73\x65\x74\x41\x75\x74\x68\x6F\x72","\x2A\x2A","\x67\x61\x6D\x62\x61\x72","\x68\x74\x74\x70\x3A\x2F\x2F\x72\x65\x73\x75\x6C\x74\x73\x2E\x64\x6F\x67\x70\x69\x6C\x65\x2E\x63\x6F\x6D\x2F\x73\x65\x72\x70\x3F\x71\x63\x3D\x69\x6D\x61\x67\x65\x73\x26\x71\x3D","\x47\x45\x54","\x74\x65\x78\x74\x2F\x68\x74\x6D\x6C","\x43\x68\x72\x6F\x6D\x65","\x6C\x6F\x61\x64","\x2E\x69\x6D\x61\x67\x65\x20\x61\x2E\x6C\x69\x6E\x6B","\x68\x72\x65\x66","\x61\x74\x74\x72","\x65\x71","\x6D\x61\x70","\x66\x69\x6C\x6C","\x47\x61\x6D\x62\x61\x72\x20\x79\x67\x20\x64\x69\x6D\x61\x6B\x73\x75\x64\x20\x74\x65\x6C\x61\x68\x20\x64\x69\x74\x65\x6D\x75\x6B\x61\x6E\x21","\x68\x65\x6C\x70","\x44\x69\x6B\x65\x6D\x62\x61\x6E\x67\x6B\x61\x6E\x20\x6F\x6C\x65\x68\x20\x6C\x61\x72\x6F\x6E\x62\x65\x74\x61","\x73\x65\x74\x46\x6F\x6F\x74\x65\x72","\x3E\x68\x65\x6C\x70","\x55\x6E\x74\x75\x6B\x20\x6D\x65\x6E\x61\x6D\x70\x69\x6C\x6B\x61\x6E\x20\x70\x65\x73\x61\x6E\x20\x69\x6E\x69\x2E","\x40\x75\x73\x65\x72\x6E\x61\x6D\x65","\x55\x6E\x74\x75\x6B\x20\x6D\x65\x6D\x62\x65\x72\x69\x74\x61\x68\x75\x20\x75\x73\x65\x72\x20\x79\x61\x6E\x67\x20\x64\x69\x2D\x6D\x65\x6E\x74\x69\x6F\x6E\x2E","\x3E\x69\x6E\x76\x69\x74\x65","\x55\x6E\x74\x75\x6B\x20\x6D\x65\x6E\x61\x6D\x70\x69\x6C\x6B\x61\x6E\x20\x74\x61\x75\x74\x61\x6E\x20\x75\x6E\x64\x61\x6E\x67\x61\x6E\x20\x6B\x65\x20\x73\x65\x72\x76\x65\x72\x20\x72\x65\x73\x6D\x69\x20\x41\x75\x78\x69\x64\x65\x2E","\x3E\x73\x75\x6D\x62\x65\x72","\x55\x6E\x74\x75\x6B\x20\x6D\x65\x6C\x69\x68\x61\x74\x20\x6B\x6F\x64\x65\x20\x73\x75\x6D\x62\x65\x72\x20\x62\x6F\x74\x20\x69\x6E\x69\x2E","\x3E\x67\x61\x6D\x62\x61\x72\x20\x5B\x6F\x62\x6A\x65\x6B\x5D","\x55\x6E\x74\x75\x6B\x20\x6D\x65\x6E\x61\x6D\x70\x69\x6C\x6B\x61\x6E\x20\x67\x61\x6D\x62\x61\x72\x20\x79\x67\x20\x69\x6E\x67\x69\x6E\x20\x61\x6E\x64\x61\x20\x63\x61\x72\x69\x2E","\x3E\x63\x75\x61\x63\x61\x20\x5B\x6E\x61\x6D\x61\x20\x6B\x6F\x74\x61\x5D","\x55\x6E\x74\x75\x6B\x20\x6D\x65\x6E\x61\x6D\x70\x69\x6C\x6B\x61\x6E\x20\x69\x6E\x66\x6F\x20\x63\x75\x61\x63\x61\x20\x64\x69\x20\x6B\x6F\x74\x61\x20\x61\x6E\x64\x61\x2E","\x3E\x64\x70\x20\x5B\x75\x73\x65\x72\x6E\x61\x6D\x65\x5D","\x55\x6E\x74\x75\x6B\x20\x6D\x65\x6E\x67\x75\x6E\x64\x75\x68\x20\x61\x76\x61\x74\x61\x72\x20\x73\x65\x73\x65\x6F\x72\x61\x6E\x67\x2E","\x3E\x70\x69\x6E\x67","\x55\x6E\x74\x75\x6B\x20\x6D\x65\x6E\x67\x65\x63\x65\x6B\x20\x73\x74\x61\x74\x75\x73\x20\x70\x69\x6E\x67\x20\x61\x6E\x64\x61\x2E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x69\x2E\x69\x62\x62\x2E\x63\x6F\x2F\x63\x46\x4E\x72\x52\x43\x47\x2F\x64\x70\x61\x75\x78\x32\x2D\x30\x31\x2E\x70\x6E\x67","\uD83D\uDCCE\x20\x44\x61\x66\x74\x61\x72\x20\x70\x65\x72\x69\x6E\x74\x61\x68\x20\x79\x61\x6E\x67\x20\x74\x65\x72\x73\x65\x64\x69\x61\x3A\x20\uD83D\uDCCE"];const {Client,RichEmbed}=require(_0x571a[0]);const weather=require(_0x571a[1]);const client= new Client();const prefix=_0x571a[2];const youtube=require(_0x571a[3]);const ytdl=require(_0x571a[4]);const http=require(_0x571a[5]);const express=require(_0x571a[6]);const app=express();app[_0x571a[12]](_0x571a[7],(request,_0x8841xa)=>{console[_0x571a[10]](Date[_0x571a[8]]()+ _0x571a[9]);_0x8841xa[_0x571a[11]](200)});app[_0x571a[14]](process[_0x571a[13]].PORT);setInterval(()=>{http[_0x571a[12]]((_0x571a[15]+ (process[_0x571a[13]][_0x571a[16]])+ _0x571a[17]))},280000);var cheerio=require(_0x571a[18]);var request=require(_0x571a[19]);client[_0x571a[20]](process[_0x571a[13]].TOKEN);client[_0x571a[32]](_0x571a[21],()=>{console[_0x571a[10]]((_0x571a[22]+ (client[_0x571a[24]][_0x571a[23]])+ _0x571a[25]));client[_0x571a[24]][_0x571a[28]](_0x571a[26],_0x571a[27]);client[_0x571a[24]][_0x571a[31]](_0x571a[29],{type:_0x571a[30]})});client[_0x571a[32]](_0x571a[33],(_0x8841xc)=>{const _0x8841xd=_0x8841xc[_0x571a[38]][_0x571a[37]][_0x571a[36]]((_0x8841xe)=>_0x8841xe[_0x571a[34]]=== _0x571a[35]);let _0x8841xf=_0x8841xc[_0x571a[24]][_0x571a[39]];if(!_0x8841xd){return};var _0x8841x10=_0x8841xc[_0x571a[38]][_0x571a[41]][_0x571a[36]](_0x571a[34],_0x571a[40]);_0x8841xc[_0x571a[42]](_0x8841x10);const _0x8841x11= new RichEmbed()[_0x571a[45]](_0x8841xf+ _0x571a[44])[_0x571a[43]](0x03f8fc);_0x8841xd[_0x571a[46]](_0x8841x11);setTimeout(function(){_0x8841xd[_0x571a[46]]((_0x571a[47]+ _0x8841xc+ _0x571a[48]))},1000)});client[_0x571a[32]](_0x571a[49],(_0x8841xc)=>{const _0x8841xd=_0x8841xc[_0x571a[38]][_0x571a[37]][_0x571a[36]]((_0x8841xe)=>_0x8841xe[_0x571a[34]]=== _0x571a[35]);let _0x8841xf=_0x8841xc[_0x571a[24]][_0x571a[39]];if(!_0x8841xd){return};const _0x8841x11= new RichEmbed()[_0x571a[45]](_0x8841xf+ _0x571a[50])[_0x571a[43]](0xff0000);_0x8841xd[_0x571a[46]](_0x8841x11);setTimeout(function(){_0x8841xd[_0x571a[46]]((_0x571a[51]+ _0x8841xc+ _0x571a[52]))},1000)});client[_0x571a[32]](_0x571a[53],(_0x8841x12)=>{let _0x8841x13;let _0x8841x14=_0x8841x12[_0x571a[37]];channelLoop:for(let _0x8841x15 of _0x8841x14){let _0x8841x16=_0x8841x15[1][_0x571a[54]];if(_0x8841x16=== _0x571a[55]){_0x8841x13= _0x8841x15[0];break channelLoop}};let _0x8841xd=client[_0x571a[37]][_0x571a[12]](_0x8841x12[_0x571a[56]]|| _0x8841x13);const _0x8841x11= new RichEmbed()[_0x571a[45]](_0x571a[57])[_0x571a[43]](0x03f8fc);_0x8841xd[_0x571a[46]](_0x8841x11)});client[_0x571a[32]](_0x571a[53],(_0x8841x12)=>{let _0x8841x13;let _0x8841x14=_0x8841x12[_0x571a[37]];channelLoop:for(let _0x8841x15 of _0x8841x14){let _0x8841x16=_0x8841x15[1][_0x571a[54]];if(_0x8841x16=== _0x571a[55]){_0x8841x13= _0x8841x15[0];break channelLoop}};let _0x8841xd=client[_0x571a[37]][_0x571a[12]](_0x8841x12[_0x571a[56]]|| _0x8841x13);const _0x8841x11= new RichEmbed()[_0x571a[45]](_0x571a[58])[_0x571a[43]](0xff487e);_0x8841xd[_0x571a[46]](_0x8841x11)});client[_0x571a[32]](_0x571a[59],(_0x8841x17)=>{let _0x8841x18=_0x8841x17[_0x571a[64]][_0x571a[63]](prefix[_0x571a[62]])[_0x571a[61]](_0x571a[60]);let _0x8841x19=_0x8841x18[_0x571a[63]](1);let _0x8841x1a=_0x8841x17[_0x571a[64]];var _0x8841x1b=_0x8841x17[_0x571a[64]][_0x571a[61]](_0x571a[60]);if(_0x8841x17[_0x571a[64]][_0x571a[66]](prefix+ _0x571a[65])){const _0x8841x1c={seek:0,volume:1};var _0x8841x1d=_0x8841x17[_0x571a[64]][_0x571a[61]](/\s+/g)[_0x571a[68]](1,_0x8841x17[_0x571a[64]][_0x571a[62]])[_0x571a[67]](_0x571a[60]);youtube[_0x571a[77]](_0x8841x1d,(_0x8841x1e)=>{_0x8841x17[_0x571a[70]][_0x571a[46]](_0x571a[69]+ _0x8841x1e);var _0x8841x1f=_0x571a[69]+ _0x8841x1e;var _0x8841x20=ytdl(_0x8841x1f,{filter:_0x571a[71]});if(_0x8841x17[_0x571a[38]][_0x571a[37]][_0x571a[36]](_0x571a[34],_0x571a[72])=== null){const _0x8841xd=_0x8841x17[_0x571a[74]][_0x571a[73]];_0x8841xd[_0x571a[67]]()[_0x571a[76]]((_0x8841x21)=>{_0x8841x21[_0x571a[75]](_0x8841x20,_0x8841x1c)})}else {const _0x8841xd=_0x8841x17[_0x571a[74]][_0x571a[73]];_0x8841xd[_0x571a[67]]()[_0x571a[76]]((_0x8841x21)=>{_0x8841x21[_0x571a[75]](_0x8841x20,_0x8841x1c)})}})};if(_0x8841x17[_0x571a[64]][_0x571a[66]](prefix+ _0x571a[78])){if(!_0x8841x17[_0x571a[74]][_0x571a[41]][_0x571a[36]](_0x571a[34],_0x571a[79],_0x571a[80])){return};var _0x8841xc=_0x8841x17[_0x571a[83]][_0x571a[82]][_0x571a[81]]();_0x8841xc[_0x571a[78]]()[_0x571a[76]]((_0x8841xc)=>{_0x8841x17[_0x571a[70]][_0x571a[46]](_0x8841xc[_0x571a[86]]+ _0x571a[87])})[_0x571a[85]](()=>{_0x8841x17[_0x571a[70]][_0x571a[46]](_0x571a[84])})};if(_0x8841x17[_0x571a[64]][_0x571a[66]](prefix+ _0x571a[88])){if(!_0x8841x17[_0x571a[74]][_0x571a[41]][_0x571a[36]](_0x571a[34],_0x571a[79],_0x571a[80])){return};var _0x8841xc=_0x8841x17[_0x571a[83]][_0x571a[82]][_0x571a[81]]();_0x8841xc[_0x571a[88]]()[_0x571a[76]]((_0x8841xc)=>{_0x8841x17[_0x571a[70]][_0x571a[46]](_0x8841xc[_0x571a[86]]+ _0x571a[89])})[_0x571a[85]](()=>{_0x8841x17[_0x571a[70]][_0x571a[46]](_0x571a[84])})};if(_0x8841x1a[_0x571a[66]](prefix+ _0x571a[90])){if(_0x8841x17[_0x571a[38]][_0x571a[91]][_0x571a[73]]!== undefined){const _0x8841xd=_0x8841x17[_0x571a[74]][_0x571a[73]];_0x8841xd[_0x571a[67]]();const _0x8841x11= new RichEmbed()[_0x571a[45]](_0x571a[92])[_0x571a[43]](0x009975);_0x8841x17[_0x571a[70]][_0x571a[46]](_0x8841x11)}else {_0x8841x17[_0x571a[94]](_0x571a[93])}};if(_0x8841x1a[_0x571a[66]](prefix+ _0x571a[95])){if(_0x8841x17[_0x571a[38]][_0x571a[91]][_0x571a[73]]!== undefined){_0x8841x17[_0x571a[38]][_0x571a[91]][_0x571a[73]][_0x571a[96]]();const _0x8841x11= new RichEmbed()[_0x571a[45]](_0x571a[97])[_0x571a[43]](0x009975);_0x8841x17[_0x571a[70]][_0x571a[46]](_0x8841x11)}else {_0x8841x17[_0x571a[94]](_0x571a[98])}};if(_0x8841x17[_0x571a[99]](client[_0x571a[24]])){const _0x8841x11= new RichEmbed()[_0x571a[45]](_0x571a[100])[_0x571a[43]](0x42f5ef);_0x8841x17[_0x571a[70]][_0x571a[46]](_0x8841x11)};if(_0x8841x1a[_0x571a[66]](_0x8841x17[_0x571a[83]][_0x571a[101]][_0x571a[81]]())){var _0x8841x22=_0x571a[102]+ _0x8841x17[_0x571a[38]][_0x571a[103]]+ _0x571a[7]+ _0x8841x17[_0x571a[70]][_0x571a[103]]+ _0x571a[7]+ _0x8841x17[_0x571a[103]];const _0x8841x11= new RichEmbed()[_0x571a[43]](0xff0000)[_0x571a[45]](_0x571a[108])[_0x571a[107]](_0x571a[104]+ _0x571a[105]+ (_0x8841x22)+ _0x571a[106]);_0x8841x17[_0x571a[83]][_0x571a[101]][_0x571a[81]]()[_0x571a[46]](_0x8841x11)};if(_0x8841x1a[_0x571a[66]](prefix+ _0x571a[109])){const _0x8841x11= new RichEmbed()[_0x571a[45]](_0x571a[113])[_0x571a[43]](0x28c3d4)[_0x571a[107]]((_0x571a[110]+ (client[_0x571a[111]][0])+ _0x571a[112]));_0x8841x17[_0x571a[70]][_0x571a[46]](_0x8841x11)};if(_0x8841x1a[_0x571a[66]](prefix+ _0x571a[114])){const _0x8841x11= new RichEmbed()[_0x571a[45]](_0x571a[116])[_0x571a[43]](0x03f8fc)[_0x571a[107]](_0x571a[115]);_0x8841x17[_0x571a[70]][_0x571a[46]](_0x8841x11)};if(_0x8841x1a[_0x571a[66]](prefix+ _0x571a[117])){const _0x8841x11= new RichEmbed()[_0x571a[45]](_0x571a[119])[_0x571a[43]](0x03f8fc)[_0x571a[107]](_0x571a[118]);_0x8841x17[_0x571a[70]][_0x571a[46]](_0x8841x11)};if(_0x8841x17[_0x571a[64]][_0x571a[66]](prefix+ _0x571a[120])){const _0x8841x23=_0x8841x17[_0x571a[83]][_0x571a[101]][_0x571a[81]]()|| _0x8841x17[_0x571a[121]];const _0x8841x24= new RichEmbed()[_0x571a[45]](_0x571a[124])[_0x571a[43]](0x03f8fc)[_0x571a[123]](_0x8841x23[_0x571a[122]]);_0x8841x17[_0x571a[70]][_0x571a[46]](_0x8841x24)};if(_0x8841x1a[_0x571a[66]](prefix+ _0x571a[125])){weather[_0x571a[36]]({search:_0x8841x19[_0x571a[67]](_0x571a[60]),degreeType:_0x571a[126]},function(_0x8841x25,_0x8841x26){if(_0x8841x25){_0x8841x17[_0x571a[70]][_0x571a[46]](_0x8841x25)};if(_0x8841x26=== undefined|| _0x8841x26[_0x571a[62]]=== 0){_0x8841x17[_0x571a[70]][_0x571a[46]](_0x571a[127]);return};var _0x8841x27=_0x8841x26[0][_0x571a[128]];var _0x8841x28=_0x8841x26[0][_0x571a[129]];switch(_0x8841x28[_0x571a[149]]){case _0x571a[131]:var _0x8841x29=_0x571a[130];break;case _0x571a[133]:var _0x8841x29=_0x571a[132];break;case _0x571a[135]:var _0x8841x29=_0x571a[134];break;case _0x571a[137]:var _0x8841x29=_0x571a[136];break;case _0x571a[138]:var _0x8841x29=_0x571a[136];break;case _0x571a[140]:var _0x8841x29=_0x571a[139];break;case _0x571a[142]:var _0x8841x29=_0x571a[141];break;case _0x571a[144]:var _0x8841x29=_0x571a[143];break;case _0x571a[146]:var _0x8841x29=_0x571a[145];break;case _0x571a[148]:var _0x8841x29=_0x571a[147];break;default:var _0x8841x29=_0x8841x28[_0x571a[149]];break};const _0x8841x11= new RichEmbed()[_0x571a[107]](_0x571a[174]+ _0x8841x29+ _0x571a[174])[_0x571a[173]]((_0x571a[169]+ (_0x8841x28[_0x571a[170]])+ _0x571a[171]+ (_0x8841x28[_0x571a[172]])+ _0x571a[151]))[_0x571a[168]](_0x8841x28[_0x571a[167]])[_0x571a[43]](0x03f8fc)[_0x571a[154]](_0x571a[164],(_0x571a[165]+ (_0x8841x27[_0x571a[166]])+ _0x571a[151]),true)[_0x571a[154]](_0x571a[162],_0x8841x27[_0x571a[163]],true)[_0x571a[154]](_0x571a[160],(_0x571a[151]+ (_0x8841x28[_0x571a[161]])+ _0x571a[159]),true)[_0x571a[154]](_0x571a[157],(_0x571a[151]+ (_0x8841x28[_0x571a[158]])+ _0x571a[159]),true)[_0x571a[154]](_0x571a[155],(_0x571a[151]+ (_0x8841x28[_0x571a[156]])+ _0x571a[151]),true)[_0x571a[154]](_0x571a[150],(_0x571a[151]+ (_0x8841x28[_0x571a[152]])+ _0x571a[153]),true);_0x8841x17[_0x571a[70]][_0x571a[46]]({embed})})};if(_0x8841x1a[_0x571a[66]](prefix+ _0x571a[175])){_0x8841x2a(_0x8841x17,_0x8841x1b)};function _0x8841x2a(_0x8841x17,_0x8841x1b){var _0x8841x2b=_0x8841x1b[_0x571a[63]](1)[_0x571a[67]](_0x571a[60]);var _0x8841x2c={url:_0x571a[176]+ _0x8841x2b,method:_0x571a[177],headers:{"\x41\x63\x63\x65\x70\x74":_0x571a[178],"\x55\x73\x65\x72\x2D\x41\x67\x65\x6E\x74":_0x571a[179]}};request(_0x8841x2c,function(_0x8841x2d,_0x8841xa,_0x8841x2e){if(_0x8841x2d){return};$= cheerio[_0x571a[180]](_0x8841x2e);var _0x8841x2f=$(_0x571a[181]);var _0x8841x30= new Array(_0x8841x2f[_0x571a[62]])[_0x571a[186]](0)[_0x571a[185]]((_0x8841x31,_0x8841x32)=>_0x8841x2f[_0x571a[184]](_0x8841x32)[_0x571a[183]](_0x571a[182]));console[_0x571a[10]](_0x8841x30);if(!_0x8841x30[_0x571a[62]]){return};_0x8841x17[_0x571a[70]][_0x571a[46]]();const _0x8841x11= new RichEmbed()[_0x571a[45]](_0x571a[187])[_0x571a[43]](0x03f8fc)[_0x571a[123]](_0x8841x30[0]);_0x8841x17[_0x571a[70]][_0x571a[46]](_0x8841x11)})}if(_0x8841x1a[_0x571a[66]](prefix+ _0x571a[188])){const _0x8841x11= new RichEmbed()[_0x571a[45]](_0x571a[208])[_0x571a[43]](0x03f8fc)[_0x571a[168]](_0x571a[207])[_0x571a[154]](_0x571a[205],_0x571a[206])[_0x571a[154]](_0x571a[203],_0x571a[204])[_0x571a[154]](_0x571a[201],_0x571a[202])[_0x571a[154]](_0x571a[199],_0x571a[200])[_0x571a[154]](_0x571a[197],_0x571a[198])[_0x571a[154]](_0x571a[195],_0x571a[196])[_0x571a[154]](_0x571a[193],_0x571a[194])[_0x571a[154]](_0x571a[191],_0x571a[192])[_0x571a[190]](_0x571a[189]);_0x8841x17[_0x571a[70]][_0x571a[46]](_0x8841x11)}})
+const {
+	Client,
+	RichEmbed
+} = require('discord.js');
+
+const weather = require('weather-js');
+const client = new Client();
+const prefix = '>'
+const youtube = require("./youtube")
+const ytdl = require("ytdl-core");
+const dbl = require("dbl.js");
+const http = require('http');
+const express = require('express');
+const app = express();
+const cor = 'https://corona-stats.online/id';
+const propertiesObject = { format:'json' };
+var currentdate = new Date(); 
+var datetime = "tanggal " + currentdate.getDate() + "/"
+    + (currentdate.getMonth()+1)  + "/" 
+    + currentdate.getFullYear();
+app.get("/", (request, response) => {
+	console.log(Date.now() + "Saya di sini!");
+	response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+	http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+var cheerio = require("cheerio");
+var request = require("request");
+client.login(process.env.TOKEN);
+const activities_list = ["Dota 3", "Grand Theft Auto VI", "Counter Strike: Global Offensive", "Paladins", "Overwatch 2", "Dota 4", "Left 4 Dead 3", "Half Life 3"];
+
+client.on('ready', () => {
+	console.log(`Masuk sebagai ${client.user.tag}!`)
+	setInterval(() => {
+		const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
+		client.user.setActivity(activities_list[index], "playing");
+	}, 2000);
+});
+
+function randomRange(min, max) { // returns an int >= min and <= max
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+client.on('guildMemberAdd', member => {
+	const channel = member.guild.channels.find(ch => ch.name === 'chit-chat');
+	let memberTag = member.user.username;
+	if (!channel) return;
+	const embed = new RichEmbed().setTitle(memberTag + ' telah bergabung ke dalam server.').setColor(0xff0000)
+	channel.send(embed);
+	setTimeout(function() {
+		channel.send(`Halo ${member} 👋`)
+	}, 1000);
+});
+
+client.on('guildMemberRemove', member => {
+	const channel = member.guild.channels.find(ch => ch.name === 'chit-chat');
+	let memberTag = member.user.username;
+	if (!channel) return;
+	const embed = new RichEmbed().setTitle(memberTag + ' telah meninggalkan server.').setColor(0xff0000)
+	channel.send(embed);
+	setTimeout(function() {
+		channel.send(`Selamat tinggal ${member} 👋`)
+	}, 1000);
+});
+client.on("guildCreate", guild => {
+	let channelID;
+	let channels = guild.channels;
+	channelLoop: for (let c of channels) {
+		let channelType = c[1].type;
+		if (channelType === "text") {
+			channelID = c[0];
+			break channelLoop;
+		}
+	}
+	let channel = client.channels.get(guild.systemChannelID || channelID);
+	const embed = new RichEmbed().setTitle("Hai, terima kasih telah mengundang saya ke server ini.").setColor(0x03f8fc)
+	channel.send(embed);
+});
+client.on("guildCreate", guild => {
+	let channelID;
+	let channels = guild.channels;
+	channelLoop: for (let c of channels) {
+		let channelType = c[1].type;
+		if (channelType === "text") {
+			channelID = c[0];
+			break channelLoop;
+		}
+	}
+	let channel = client.channels.get(guild.systemChannelID || channelID);
+	const embed = new RichEmbed().setTitle("Ketik >help untuk menampilkan daftar perintah.").setColor(0xff487e)
+	channel.send(embed);
+});
+
+client.on('message', message => {
+	let cont = message.content.slice(prefix.length).split(" ");
+	let args = cont.slice(1);
+	let msg = message.content;
+	var parts = message.content.split(" ");
+	if (message.content.startsWith(prefix + "play")) {
+		const streamOptions = {
+			seek: 0,
+			volume: 1
+		};
+		var searchTerm = message.content.split(/\s+/g).splice(1, message.content.length).join(" ");
+		youtube.youtubeSearch(searchTerm, (vidLink) => {
+			message.channel.send("https://www.youtube.com/watch?v=" + vidLink);
+			var vidURL = "https://www.youtube.com/watch?v=" + vidLink;
+			var stream = ytdl(vidURL, {
+				filter: 'audioonly'
+			});
+			if (message.guild.channels.find("name", "Karaoke") === null) {
+				const channel = message.member.voiceChannel;
+				channel.join().then((connection) => {
+					connection.playStream(stream, streamOptions);
+				})
+			} else {
+				const channel = message.member.voiceChannel;
+				channel.join().then((connection) => {
+					connection.playStream(stream, streamOptions);
+				})
+			}
+		});
+	}
+  
+	if (message.content.includes("<@")) {
+		var link = "http://discordapp.com/channels/" + message.guild.id + "/" + message.channel.id + "/" + message.id;
+    const embed = new RichEmbed()
+    .setColor(0xff0000)
+    .setTitle("Hai! ada yg mention kamu tuh!")
+    .setFooter(`Pada ${datetime}`)
+    .setDescription("[Klik di sini untuk menuju ke pesan tersebut]" + '(' + (link) + ')')
+    message.mentions.users.first().send(embed)
+		message.react('📨');
+	}
+  
+  if (msg.startsWith(prefix + 'corona')) {
+  request({url:cor, qs:propertiesObject}, function(err, response, body) {
+          if(err) { console.log(err); return; }
+          let corona = JSON.parse(body);
+      const embed = new RichEmbed()
+      .setColor(0xff0000)
+      .setDescription(`Pada ${datetime}`)
+      .setAuthor(`Statistik CoronaVirus di Indonesia pada hari ini.`)
+      .addField('Terkonfirmasi', `${corona.data[0].cases}`, true)
+      .addField('Meninggal', `${corona.data[0].deaths}`, true)
+      .addField('Sembuh', `${corona.data[0].recovered}`,true)
+      .addField('Terkonfirmasi hari ini', `+${corona.data[0].todayCases}`,true)
+      .addField('Meninggal hari ini', `+${corona.data[0].todayDeaths}`,true)
+			message.channel.send(embed)
+          }
+      )
+  }
+  
+  if (msg.startsWith(prefix + 'coroni')) {
+  request({url:cor, qs:propertiesObject}, function(err, response, body) {
+          if(err) { console.log(err); return; }
+          let corona = JSON.parse(body);
+    var interval = setInterval (function () {
+            // use the message's channel (TextChannel) to send a new message
+      const embed = new RichEmbed()
+      .setColor(0xff0000)
+      .setDescription(`Pada ${datetime}`)
+      .setAuthor(`Statistik CoronaVirus di Indonesia pada hari ini.`)
+      .addField('Terkonfirmasi', `${corona.data[0].cases}`, true)
+      .addField('Meninggal', `${corona.data[0].deaths}`, true)
+      .addField('Sembuh', `${corona.data[0].recovered}`,true)
+      .addField('Terkonfirmasi hari ini', `+${corona.data[0].todayCases}`,true)
+      .addField('Meninggal hari ini', `+${corona.data[0].todayDeaths}`,true)
+			message.channel.send(embed)
+            .catch(console.error); // add error handling here
+        }, 1 * 3600000);
+          }
+      )
+  }
+        
+	if (msg.startsWith(prefix + 'masuk')) {
+		if (message.guild.me.voiceChannel !== undefined) {
+			const channel = message.member.voiceChannel
+			channel.join();
+			const embed = new RichEmbed().setTitle('OK. Aku masuk ya!').setColor(0x009975)
+			message.channel.send(embed)
+		} else {
+			message.reply("Masuk ke voice channel dulu!");
+		}
+	}
+	if (msg.startsWith(prefix + 'keluar')) {
+		if (message.guild.me.voiceChannel !== undefined) {
+			message.guild.me.voiceChannel.leave();
+			const embed = new RichEmbed().setTitle('OK. Saya keluar!').setColor(0x009975)
+			message.channel.send(embed);
+		} else {
+			message.reply("Saya tidak ada di voice channel itu!");
+		}
+	}
+	if (message.isMentioned(client.user)) {
+		const embed = new RichEmbed().setTitle('Ketik >help untuk info lebih lanjut.').setColor(0x42f5ef)
+		message.channel.send(embed);
+	}
+	if (msg.startsWith(prefix + 'ping')) {
+		const embed = new RichEmbed().setTitle('PONG 🏓').setColor(0x28c3d4).setDescription(`Latency: \`${client.pings[0]}ms\``)
+		message.channel.send(embed);
+	}
+	if (msg.startsWith(prefix + 'invite')) {
+		const embed = new RichEmbed().setColor(0x28c3d4).setDescription("[Klik atau copy link di sini](https://del.dog/aux)")
+		message.channel.send(embed);
+	}
+	// if (msg.startsWith(prefix + 'sumber')) {
+	// 	const embed = new RichEmbed().setTitle('Source code').setColor(0x03f8fc).setDescription("https://github.com/ronhyun329/renebytes-discord-bot")
+	// 	message.channel.send(embed);
+	// }
+	if (message.content.startsWith(prefix + 'dp')) {
+		const user = message.mentions.users.first() || message.author;
+		const avatarEmbed = new RichEmbed().setTitle('Skuy donlot').setColor(0x03f8fc).setImage(user.avatarURL);
+		message.channel.send(avatarEmbed);
+	}
+	if (msg.startsWith(prefix + 'cuaca')) {
+		weather.find({
+			search: args.join(" "),
+			degreeType: 'C'
+		}, function(err, result) {
+			if (err) message.channel.send(err);
+			if (result === undefined || result.length === 0) {
+				message.channel.send('**Lokasi tidak ditemukan!**')
+				return;
+			}
+			var location = result[0].location;
+			var current = result[0].current;
+			switch (current.skytext) {
+				case "Mostly Sunny":
+					var skytext = "Hampir cerah";
+					break;
+				case "Cloudy":
+					var skytext = "Berawan";
+					break;
+				case "Partly Cloudy":
+					var skytext = "Cerah dan berawan";
+					break;
+				case "Sunny":
+					var skytext = "Cerah";
+					break;
+				case "Clear":
+					var skytext = "Cerah";
+					break;
+				case "Mostly Clear":
+					var skytext = "Hampir Cerah";
+					break;
+				case "Mostly Cloudy":
+					var skytext = "Hampir mendung";
+					break;
+				case "Partly Sunny":
+					var skytext = "Cerah sebagian";
+					break;
+				case "Light Rain":
+					var skytext = "Hujan Ringan";
+					break;
+				case "Haze":
+					var skytext = "Berkabut";
+					break;
+				default:
+					var skytext = current.skytext;
+					break
+			}
+			const embed = new RichEmbed()
+      .setDescription('**' + skytext + '**')
+      .setAuthor(`Cuaca untuk daerah ${current.observationpoint} pada ${current.date}`)
+      .setThumbnail(current.imageUrl).setColor(0x03f8fc)
+      .addField('Waktu bagian', `UTC${location.timezone}`, true)
+      .addField('Skala suhu', location.degreetype, true)
+      .addField('Suhu', `${current.temperature}℃`, true)
+      .addField('Terasa seperti', `${current.feelslike}℃`, true)
+      .addField('Kecepatan angin', `${current.winddisplay}`, true)
+      .addField('Kelembapan', `${current.humidity}%`, true)
+			message.channel.send({embed});
+		});
+	}
+	if (msg.startsWith(prefix + 'gambar')) {
+		image(message, parts);
+	}
+
+	function image(message, parts) {
+		var search = parts.slice(1).join(" ");
+		var options = {
+			url: "http://results.dogpile.com/serp?qc=images&q=" + search,
+			method: "GET",
+			headers: {
+				"Accept": "text/html",
+				"User-Agent": "Chrome"
+			}
+		};
+		request(options, function(error, response, responseBody) {
+			if (error) {
+				return;
+			}
+			$ = cheerio.load(responseBody);
+			var links = $(".image a.link");
+			var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
+			console.log(urls);
+			if (!urls.length) {
+				return;
+			}
+			message.channel.send();
+			const embed = new RichEmbed().setTitle('Gambar yg dimaksud telah ditemukan!').setColor(0x03f8fc).setImage(urls[0])
+			message.channel.send(embed);
+		});
+	}
+	if (msg.startsWith(prefix + 'help')) {
+		const embed = new RichEmbed()
+    .setTitle('📎 DAFTAR COMMANDS 📎')
+    .setColor(0x03f8fc)
+    .setThumbnail('https://cdn.discordapp.com/attachments/589334793699983362/651310354462408725/aaaasdsddas.jpg')
+    .addField('>ping', 'Untuk mengecek status ping anda.')
+    .addField('>dp [username]', 'Untuk mengunduh avatar seseorang.')
+    .addField('>cuaca [nama kota]', 'Untuk menampilkan info cuaca di kota anda.')
+    .addField('>gambar [keyword]', 'Untuk menampilkan gambar yg ingin anda cari.')
+    .addField('>invite', 'Untuk menampilkan link server Auxide.')
+    .addField('@username [message]', 'Untuk memberitahu user yang di-mention.')
+    .addField('>corona', 'Untuk menampilkan info statistik corona di indonesia.')
+    .addField('>help', 'Untuk menampilkan pesan ini.')
+    .setFooter('Developed by ronhyun329');
+		message.channel.send(embed);
+	}
+});
