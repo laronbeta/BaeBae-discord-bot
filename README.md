@@ -1,4 +1,4 @@
-# BaeBae Discord Bot
+# Renebytes Discord Bot
 Made with Javascript and ❤️ by ronhyun329
 Currently hosted in [Glitch](https://glitch.com)
 
