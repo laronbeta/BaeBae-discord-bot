@@ -32,6 +32,7 @@ var cheerio = require("cheerio");
 var request = require("request");
 client.login(process.env.TOKEN);
 const activities_list = [
+ "VALORANT",
   "sama ronhyun",
   "follow ig @renebaebae"
 ];
