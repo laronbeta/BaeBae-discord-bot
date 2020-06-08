@@ -465,7 +465,7 @@ function execute(message, serverQueue) {
     queueContruct.songs.push(song);
 
     try {
-      var connection = await voiceChannel.join();
+      var connection = voiceChannel.join();
       queueContruct.connection = connection;
       play(message.guild, queueContruct.songs[0]);
     } catch (err) {
