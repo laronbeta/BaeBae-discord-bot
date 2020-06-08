@@ -4,7 +4,6 @@
 const weather = require("weather-js");
 const client = new Client();
 const prefix = '.';
-const youtube = require("./youtube");
 const ytdl = require("ytdl-core");
 const dbl = require("dbl.js");
 const http = require("http");
@@ -33,9 +32,8 @@ var cheerio = require("cheerio");
 var request = require("request");
 client.login(process.env.TOKEN);
 const activities_list = [
-  "sama siapa tuch",
   "sama ronhyun",
-  "sama siapa ya"
+  "follow ig @ronhyun329"
 ];
 
 client.on("ready", () => {
