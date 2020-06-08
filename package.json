@@ -1,47 +1,53 @@
 {
-  "name": "jichuscraper-bot",
-  "version": "4.2.6",
-  "description": "A useless bot",
+  "name": "renebytes2-bot",
+  "version": "1.0.0",
+  "description": "An useful bot",
   "main": "node bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bot.js"
   },
   "engines": {
-    "node": "8.4.0"
+    "node": "8.15.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zephyrxj/jichuscraper-bot.git"
+    "url": "git+https://github.com/ronhyun329/renebytes-discord-bot"
   },
-  "author": "zephyrxj",
+  "author": "ronhyun329",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zephyrxj/jichuscraper-bot/issues"
+    "url": "https://github.com/ronhyun329/renebytes-discord-bot/issues"
   },
-  "homepage": "https://github.com/zephyrxj/jichuscraper-bot#readme",
+  "homepage": "https://github.com/ronhyun329/renebytes-discord-bot#readme",
   "dependencies": {
-    "discord.js": "^11.5.1",
-    "enmap": "^5.1.0",
-    "express": "^4.16.4",
+    "enmap": "^5.2.4",
+    "express": "^4.17.1",
     "giphy-api": "^2.0.1",
-    "moment": "^2.24.0",
+    "moment": "^2.26.0",
     "moment-duration-format": "^2.2.2",
     "discord": "^0.8.2",
     "weather-js": "^2.0.0",
     "cheerio": "^0.22.0",
-    "youtube-dl": "^2.0.1",
-    "ytdl-core": "^0.29.5",
+    "youtube-dl": "^2.1.0",
+    "ytdl-core": "^1.0.3",
     "simple-youtube-api": "^5.2.1",
     "ffmpeg": "^0.0.4",
     "url": "^0.11.0",
-    "eris": "^0.10.1",
+    "eris": "^0.13.1",
     "get-youtube-id": "^1.0.1",
     "youtube-info": "^1.3.2",
     "winston": "^3.2.1",
     "fs": "^0.0.2",
     "youtube-search": "^1.1.4",
-    "youtube-audio-stream": "^0.3.0",
-    "requestify": "^0.2.5"
+    "youtube-audio-stream": "^0.3.2",
+    "requestify": "^0.2.5",
+    "dbl": "^0.1.12",
+    "dbl.js": "^1.5.0",
+    "zlib-sync": "^0.1.6",
+    "erlpack": "^0.1.3",
+    "bufferutil": "^4.0.1",
+    "libsodium-wrappers": "^0.7.5",
+    "discord.js": "^11.5.1"
   }
 }
