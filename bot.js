@@ -72,7 +72,7 @@ client.on("guildMemberRemove", member => {
     .setColor(0xff0000);
   channel.send(embed);
   setTimeout(function() {
-    channel.send(`Selamat tinggal ${member} 👋`);
+    channel.send(`Selamat tinggal 👋`);
   }, 1000);
 });
 client.on("guildCreate", guild => {
@@ -115,7 +115,6 @@ client.on("message", message => {
   let msg = message.content;
   var parts = message.content.split(" ");
  const serverQueue = queue.get(message.guild.id);
- if (!message.content.startsWith(prefix)) return;
  
      if (msg.startsWith(prefix + "play")) {
     execute(message, serverQueue);
@@ -130,10 +129,10 @@ client.on("message", message => {
     message.channel.send("You need to enter a valid command!");
   }
 
-  if (msg.startsWith(">")) {
-    message.channel.send("Pake simbol titik (.)")
-     message.channel.send("Contoh: .ping")
-  }
+//   if (msg.startsWith(">")) {
+//     message.channel.send("Pake simbol titik (.)")
+//      message.channel.send("Contoh: .ping")
+//   }
   
   if (message.content.includes("<@")) {
     var link =
