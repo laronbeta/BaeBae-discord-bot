@@ -125,8 +125,6 @@ client.on("message", async message => {
   } else if (msg.startsWith(prefix + "stop")) {
     stop(message, serverQueue);
     return;
-  } else {
-    message.channel.send("You need to enter a valid command!");
   }
 
 //   if (msg.startsWith(">")) {
