@@ -109,23 +109,11 @@ client.on("guildCreate", guild => {
 });
 
 
-client.on("message", async message => {
+client.on("message", message => {
   let cont = message.content.slice(prefix.length).split(" ");
   let args = cont.slice(1);
   let msg = message.content;
   var parts = message.content.split(" ");
- const serverQueue = queue.get(message.guild.id);
- 
-     if (msg.startsWith(prefix + "play")) {
-    execute(message, serverQueue);
-    return;
-  } else if (msg.startsWith(prefix + "skip")) {
-    skip(message, serverQueue);
-    return;
-  } else if (msg.startsWith(prefix + "stop")) {
-    stop(message, serverQueue);
-    return;
-  }
 
 //   if (msg.startsWith(">")) {
 //     message.channel.send("Pake simbol titik (.)")
@@ -390,7 +378,27 @@ client.on("message", async message => {
       })
     });
   }
-  
+ 
+  client.on("message", async message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  const serverQueue = queue.get(message.guild.id);
+
+  if (message.content.startsWith(`${prefix}play`)) {
+    execute(message, serverQueue);
+    return;
+  } else if (message.content.startsWith(`${prefix}skip`)) {
+    skip(message, serverQueue);
+    return;
+  } else if (message.content.startsWith(`${prefix}stop`)) {
+    stop(message, serverQueue);
+    return;
+  } else {
+    message.channel.send("You need to enter a valid command!");
+  }
+});
+ 
   if (msg.startsWith(prefix + "help")) {
     const embed = new RichEmbed()
       .setTitle("📎 DAFTAR COMMANDS 📎")
