@@ -33,7 +33,7 @@ var request = require("request");
 client.login(process.env.TOKEN);
 const activities_list = [
   "sama ronhyun",
-  "follow ig @ronhyun329"
+  "follow ig @renebaebae"
 ];
 
 client.on("ready", () => {
