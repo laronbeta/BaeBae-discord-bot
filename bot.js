@@ -486,7 +486,7 @@ async function execute(message, serverQueue) {
 }
 
 function skip(message, serverQueue) {
-  if (!message.member.voice.channel)
+  if (!message.member.voiceChannel)
     return message.channel.send(
       "You have to be in a voice channel to stop the music!"
     );
@@ -496,7 +496,7 @@ function skip(message, serverQueue) {
 }
 
 function stop(message, serverQueue) {
-  if (!message.member.voice.channel)
+  if (!message.member.voiceChannel)
     return message.channel.send(
       "You have to be in a voice channel to stop the music!"
     );
