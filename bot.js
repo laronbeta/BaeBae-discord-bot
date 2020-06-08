@@ -109,7 +109,7 @@ client.on("guildCreate", guild => {
 });
 
 
-client.on("message", message => {
+client.on("message", async message => {
   let cont = message.content.slice(prefix.length).split(" ");
   let args = cont.slice(1);
   let msg = message.content;
@@ -429,10 +429,10 @@ client.on("message", message => {
   }
 });
 
-function execute(message, serverQueue) {
+async function execute(message, serverQueue) {
   const args = message.content.split(" ");
 
-  const voiceChannel = message.member.voiceChannel;
+  const voiceChannel = message.member.voice.channel;
   if (!voiceChannel)
     return message.channel.send(
       "You need to be in a voice channel to play music!"
@@ -444,7 +444,7 @@ function execute(message, serverQueue) {
     );
   }
 
-  const songInfo = ytdl.getInfo(args[1]);
+  const songInfo = await ytdl.getInfo(args[1]);
   const song = {
     title: songInfo.title,
     url: songInfo.video_url
@@ -465,7 +465,7 @@ function execute(message, serverQueue) {
     queueContruct.songs.push(song);
 
     try {
-      var connection = voiceChannel.join();
+      var connection = await voiceChannel.join();
       queueContruct.connection = connection;
       play(message.guild, queueContruct.songs[0]);
     } catch (err) {
