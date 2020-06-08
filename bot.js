@@ -5,6 +5,7 @@ const weather = require("weather-js");
 const client = new Client();
 const prefix = '.';
 const ytdl = require("ytdl-core");
+const queue = new Map();F
 const dbl = require("dbl.js");
 const http = require("http");
 const express = require("express");
@@ -443,7 +444,7 @@ function execute(message, serverQueue) {
     );
   }
 
-  const songInfo = await ytdl.getInfo(args[1]);
+  const songInfo = ytdl.getInfo(args[1]);
   const song = {
     title: songInfo.title,
     url: songInfo.video_url
