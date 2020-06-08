@@ -436,9 +436,8 @@ client.on("message", async message => {
 });
 
 async function execute(message, serverQueue) {
-  let cont = message.content.slice(prefix.length).split(" ");
-  let args = cont.slice(1);
-  var parts = message.content.split(" ");
+  let args = message.content.slice(prefix.length).split(" ");
+//   var args = message.content.split(" ");
 
   const voiceChannel = message.member.voiceChannel;
   if (!voiceChannel)
