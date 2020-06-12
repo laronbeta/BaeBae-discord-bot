@@ -37,9 +37,16 @@ const activities_list = [
   "follow ig @renebaebae"
 ];
 
-client.on('ready', () => {
+client.on("ready", () =>{
     console.log(`Logged in as ${client.user.tag}!`);
-});
+    client.user.setPresence({
+        status: "online",  //You can show online, idle....
+        game: {
+            name: "Using !help",  //The message shown
+            type: "STREAMING" //PLAYING: WATCHING: LISTENING: STREAMING:
+        }
+    });
+ });
 
 function randomRange(min, max) {
   // returns an int >= min and <= max
