@@ -39,7 +39,7 @@ const activities_list = [
 ];
 
 client.on("ready", () => {
-    const channel = client.channels.cache.get("694518254500315167");
+    const channel = client.channels.get("694518254500315167");
     if (!channel) return console.error("The channel does not exist!");
     channel.join().then(connection => {
         // Yay, it worked!
