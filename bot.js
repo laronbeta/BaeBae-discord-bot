@@ -50,9 +50,6 @@ client.on("ready", () => {
     const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
     client.user.setActivity(activities_list[index], "playing");
   }, 2000);
-   .catch(e => {
-    // Oh no, it errored! Let's log it to console :)
-    console.error(e);
   });
 
 function randomRange(min, max) {
