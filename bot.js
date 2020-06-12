@@ -39,18 +39,16 @@ const activities_list = [
 ];
 
 client.on("ready", () => {
-  const channel = client.channels.get("694518254500315167");
+  const channel = client.channels.get("mychannelid");
   if (!channel) return console.error("The channel does not exist!");
   channel.join().then(connection => {
     // Yay, it worked!
     console.log("Successfully connected.");
-  })
-  console.log(`Masuk sebagai ${client.user.tag}!`);
-  setInterval(() => {
-    const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
-    client.user.setActivity(activities_list[index], "playing");
-  }, 2000);
+  }).catch(e => {
+    // Oh no, it errored! Let's log it to console :)
+    console.error(e);
   });
+});
 
 function randomRange(min, max) {
   // returns an int >= min and <= max
