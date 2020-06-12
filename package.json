@@ -32,8 +32,6 @@
     "youtube-dl": "^2.1.0",
     "ytdl-core": "^1.0.3",
     "simple-youtube-api": "^5.2.1",
-    "ffmpeg": "^0.0.4",
-    "ffmpeg-binaries": "^3.2.2-3",
     "url": "^0.11.0",
     "eris": "^0.13.1",
     "get-youtube-id": "^1.0.1",
