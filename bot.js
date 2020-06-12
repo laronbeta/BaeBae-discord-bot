@@ -37,16 +37,8 @@ const activities_list = [
   "follow ig @renebaebae"
 ];
 
-client.on("ready", () => {
-  const channel = client.channels.get("694518254500315167");
-  if (!channel) return console.error("The channel does not exist!");
-  channel.join().then(connection => {
-    // Yay, it worked!
-    console.log("Successfully connected.");
-  }).catch(e => {
-    // Oh no, it errored! Let's log it to console :)
-    console.error(e);
-  });
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
 });
 
 function randomRange(min, max) {
