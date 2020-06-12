@@ -43,7 +43,7 @@ client.on("ready", () =>{
         status: "online",  //You can show online, idle....
         game: {
             name: "with ronhyun",  //The message shown
-            type: "LISTENING" //PLAYING: WATCHING: LISTENING: STREAMING:
+            type: "PLAYING" //PLAYING: WATCHING: LISTENING: STREAMING:
         }
     });
  });
