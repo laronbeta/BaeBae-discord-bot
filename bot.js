@@ -42,8 +42,8 @@ client.on("ready", () =>{
     client.user.setPresence({
         status: "online",  //You can show online, idle....
         game: {
-            name: "Using !help",  //The message shown
-            type: "STREAMING" //PLAYING: WATCHING: LISTENING: STREAMING:
+            name: "with ronhyun",  //The message shown
+            type: "LISTENING" //PLAYING: WATCHING: LISTENING: STREAMING:
         }
     });
  });
