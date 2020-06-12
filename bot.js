@@ -5,7 +5,6 @@ const weather = require("weather-js");
 const client = new Client();
 const prefix = '.';
 const ytdl = require("ytdl-core");
-const queue = new Map();
 const dbl = require("dbl.js");
 const http = require("http");
 const express = require("express");
@@ -39,16 +38,15 @@ const activities_list = [
 ];
 
 client.on("ready", () => {
-    const channel = client.channels.get("694518254500315167");
-    if (!channel) return console.error("The channel does not exist!");
-    channel.join().then(connection => {
-        // Yay, it worked!
-        console.log("Successfully connected.");
-    }).catch(e => {
-
-        // Oh no, it errored! Let's log it to console :)
-        console.error(e);
-    });
+  const channel = client.channels.get("694518254500315167");
+  if (!channel) return console.error("The channel does not exist!");
+  channel.join().then(connection => {
+    // Yay, it worked!
+    console.log("Successfully connected.");
+  }).catch(e => {
+    // Oh no, it errored! Let's log it to console :)
+    console.error(e);
+  });
 });
 
 function randomRange(min, max) {
