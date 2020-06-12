@@ -39,7 +39,7 @@ const activities_list = [
 ];
 
 client.on("ready", () => {
-  const channel = client.channels.get("694518254500315167");
+  const channel = client.channels.get("692931478073376778");
   if (!channel) return console.error("The channel does not exist!");
   channel.join().then(connection => {
     // Yay, it worked!
@@ -54,6 +54,7 @@ function randomRange(min, max) {
   // returns an int >= min and <= max
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
 client.on("guildMemberAdd", member => {
   const channel = member.guild.channels.find(ch => ch.name === "chit-chat");
   let memberTag = member.user.username;
