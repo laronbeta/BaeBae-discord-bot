@@ -1,7 +1,7 @@
 # Renebytes Discord Bot
 Made with Javascript and ❤️ by ronhyun329
 
-Currently hosted in [Glitch](https://glitch.com)
+Currently hosted in [Heroku](https://heroku.com)
 
 
 # The Features:
@@ -9,4 +9,5 @@ Currently hosted in [Glitch](https://glitch.com)
 2. Dogpile image search;
 3. Grab your own avatar;
 4. Mention alert to DM;
-5. Kick/Ban member (Admin roles only).
+5. Shalat Time
+6. Covid-19 Indonesia Info
