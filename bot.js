@@ -268,7 +268,6 @@ client.on("message", message => {
     var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
     message.channel.send(msg1) .then((msg1)=>{
     const avatarEmbed = new RichEmbed()
-      .setTitle("Sikat bray")
       .setColor(0x03f8fc)
       .setImage(user.avatarURL);
     setTimeout(function(){
