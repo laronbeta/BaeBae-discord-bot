@@ -128,7 +128,6 @@ client.on("message", message => {
        .addField("Server ID" , message.guild.id)
        .addField("Jumlah user", `${message.guild.members.filter(m => m.presence.status !== 'offline').size} / ${message.guild.memberCount}`)
        .addField("Roles", `${message.guild.roles.size}`);
-       );
     setTimeout(function(){
      msg1.delete(1);
   }, 2000)
