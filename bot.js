@@ -154,10 +154,12 @@ client.on("message", message => {
     })
     let embed = new RichEmbed({
         "title": `Member dengan role ${roleName}`,
-        "description": membersWithRole.join("\n"),
+        "description": ("➡") membersWithRole.join("\n"),
         "color": 0xFF00FF
     });
     return message.channel.send({embed});
+} else {
+      message.reply("Tidak ada member dengan role tersebut!");
 }
  
   if (msg.startsWith(prefix + "shalat")) {
