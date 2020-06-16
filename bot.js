@@ -127,7 +127,7 @@ client.on("message", message => {
        .addField("Owner", `${message.guild.owner.user}`)
        .addField("Server ID" , message.guild.id)
        .addField("Jumlah user", `${message.guild.memberCount}`)
-       .addField("User yang online", `${message.guild.members.filter(m => m.presence.status !== 'offline'}`)
+       .addField("User yang online", `${message.guild.members.filter(m => m.presence.status !== 'offline')}`)
        .addField("jumlah roles", `${message.guild.roles.size}`);
     setTimeout(function(){
      msg1.delete(1);
