@@ -20,19 +20,11 @@ var datetime =
   (currentdate.getMonth() + 1) +
   "/" +
   currentdate.getFullYear();
-app.get("/", (request, response) => {
-  console.log(Date.now() + "Saya di sini!");
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
+
 var cheerio = require("cheerio");
 var request = require("request");
 client.login(process.env.TOKEN);
 const activities_list = [
- "CE ES GOH",
   "sama ronhyun",
   "follow ig @renebaebae"
 ];
@@ -101,7 +93,7 @@ client.on("guildCreate", guild => {
   }
   let channel = client.channels.get(guild.systemChannelID || channelID);
   const embed = new RichEmbed()
-    .setTitle("Ketik >help untuk menampilkan daftar perintah.")
+    .setTitle("Ketik .help untuk menampilkan daftar perintah.")
     .setColor(0xff487e);
   channel.send(embed);
 });
@@ -407,7 +399,7 @@ client.on("message", message => {
         ".shalat",
         "Untuk menampilkan jadwal shalat di Tangerang."
       )
-      .addField(">help", "Untuk menampilkan pesan ini.")
+      .addField(".help", "Untuk menampilkan pesan ini.")
       .setFooter("Developed by ronhyun329");
     message.channel.send(embed);
   }
