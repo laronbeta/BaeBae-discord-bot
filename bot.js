@@ -74,6 +74,7 @@ client.on("guildMemberRemove", member => {
     channel.send(`Selamat tinggal 👋`);
   }, 1000);
 });
+
 client.on("guildCreate", guild => {
   let channelID;
   let channels = guild.channels;
@@ -90,6 +91,7 @@ client.on("guildCreate", guild => {
     .setColor(0x03f8fc);
   channel.send(embed);
 });
+
 client.on("guildCreate", guild => {
   let channelID;
   let channels = guild.channels;
@@ -113,11 +115,25 @@ client.on("message", message => {
   let args = cont.slice(1);
   let msg = message.content;
   var parts = message.content.split(" ");
-
-//   if (msg.startsWith(">")) {
-//     message.channel.send("Pake simbol titik (.)")
-//      message.channel.send("Contoh: .ping")
-//   }
+ 
+ 
+  if (msg.startsWith(prefix + "serverinfo")) {
+   var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
+      message.channel.send(msg1) .then((msg1)=>{
+  const embed = new Discord.RichEmbed()
+       .setAuthor(message.author.username)
+       .setColor("#3498db")
+       .addField("Name", `${message.guild.name}`)
+       .addField("Owner", `${message.guild.owner.user}`)
+       .addField("Server ID" , message.guild.id)
+       .addField("Jumlah user", `${message.guild.members.filter(m => m.presence.status !== 'offline').size} / ${message.guild.memberCount}`)
+       .addField("Roles", `${message.guild.roles.size}`);
+       );
+    setTimeout(function(){
+     msg1.delete(1);
+  }, 2000)
+       message.channel.send(embed);
+} 
   
   if (message.content.includes("<@")) {
     var link =
