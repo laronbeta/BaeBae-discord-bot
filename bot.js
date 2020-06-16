@@ -120,7 +120,7 @@ client.on("message", message => {
   if (msg.startsWith(prefix + "serverinfo")) {
    var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
      message.channel.send(msg1) .then((msg1)=>{
-     const embed = new Discord.RichEmbed()
+     const embed = new RichEmbed()
        .setAuthor(message.author.username)
        .setColor("#3498db")
        .addField("Name", `${message.guild.name}`)
