@@ -119,8 +119,8 @@ client.on("message", message => {
  
   if (msg.startsWith(prefix + "serverinfo")) {
    var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
-      message.channel.send(msg1) .then((msg1)=>{
-  const embed = new Discord.RichEmbed()
+     message.channel.send(msg1) .then((msg1)=>{
+     const embed = new Discord.RichEmbed()
        .setAuthor(message.author.username)
        .setColor("#3498db")
        .addField("Name", `${message.guild.name}`)
@@ -133,16 +133,11 @@ client.on("message", message => {
      msg1.delete(1);
   }, 2000)
        message.channel.send(embed);
-} 
+  })
+}
   
   if (message.content.includes("<@")) {
-    var link =
-      "http://discordapp.com/channels/" +
-      message.guild.id +
-      "/" +
-      message.channel.id +
-      "/" +
-      message.id;
+    var link = "http://discordapp.com/channels/" + message.guild.id + "/" + message.channel.id + "/" + message.id;
     var msg1 = '𝙋𝙚𝙨𝙖𝙣 𝙩𝙚𝙡𝙖𝙝 𝙙𝙞𝙠𝙞𝙧𝙞𝙢.';
     message.channel.send(msg1) .then((msg1)=>{
     const embed = new RichEmbed()
