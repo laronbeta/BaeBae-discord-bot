@@ -55,7 +55,7 @@ client.on("guildMemberAdd", member => {
   if (!channel) return;
   const embed = new RichEmbed()
     .setTitle(memberTag + " telah bergabung ke dalam server.")
-    .setColor(0xff0000);
+    .setColor(0xd17eff);
   channel.send(embed);
   setTimeout(function() {
     channel.send(`Halo ${member} 👋`);
@@ -68,7 +68,7 @@ client.on("guildMemberRemove", member => {
   if (!channel) return;
   const embed = new RichEmbed()
     .setTitle(memberTag + " telah meninggalkan server.")
-    .setColor(0xff0000);
+    .setColor(0xd17eff);
   channel.send(embed);
   setTimeout(function() {
     channel.send(`Selamat tinggal 👋`);
@@ -88,7 +88,7 @@ client.on("guildCreate", guild => {
   let channel = client.channels.get(guild.systemChannelID || channelID);
   const embed = new RichEmbed()
     .setTitle("Hai, terima kasih telah mengundangku ke server ini.")
-    .setColor(0x03f8fc);
+    .setColor(0xd17eff);
   channel.send(embed);
 });
 
@@ -105,7 +105,7 @@ client.on("guildCreate", guild => {
   let channel = client.channels.get(guild.systemChannelID || channelID);
   const embed = new RichEmbed()
     .setTitle("Ketik .help untuk menampilkan daftar perintah.")
-    .setColor(0xff487e);
+    .setColor(0xd17eff);
   channel.send(embed);
 });
 
@@ -122,7 +122,7 @@ client.on("message", message => {
      message.channel.send(msg1) .then((msg1)=>{
      const embed = new RichEmbed()
        .setAuthor(`${message.guild.name}`)
-       .setColor("#3498db")
+       .setColor("#d17eff")
        .addField("Nama Server", `${message.guild.name}`)
        .addField("Owner", `${message.guild.owner.user}`)
        .addField("Server ID" , message.guild.id)
@@ -141,7 +141,7 @@ client.on("message", message => {
     var msg1 = '𝙋𝙚𝙨𝙖𝙣 𝙩𝙚𝙡𝙖𝙝 𝙙𝙞𝙠𝙞𝙧𝙞𝙢.';
     message.channel.send(msg1) .then((msg1)=>{
     const embed = new RichEmbed()
-      .setColor(0xff0000)
+      .setColor(0xd17eff)
       .setTitle("Hai! ada yg mention kamu tuh!")
       .setFooter(`${datetime}`)
       .setDescription(
@@ -166,7 +166,7 @@ client.on("message", message => {
       var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
       message.channel.send(msg1) .then((msg1)=>{
       const embed = new RichEmbed()
-        .setColor(0x00FF00)
+        .setColor(0xd17eff)
         .setFooter("Menggunakan perhitungan dari Muslim World League")
         .setDescription(`Pada tanggal ${ramadhan.data.date.readable}`)
         .setAuthor(`Jadwal Shalat di kota Tangerang`)
@@ -197,7 +197,7 @@ client.on("message", message => {
       var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
       message.channel.send(msg1) .then((msg1)=>{
       const embed = new RichEmbed()
-        .setColor(0x00FFFF)
+        .setColor(0xd17eff)
         .setAuthor(`Statistik COVID-19 di Indonesia pada hari ini.`)
         .setFooter("Menggunakan data dari https://corona-stats.online/id")
         .addField("Total kasus", `${corona.data[0].cases} (+${corona.data[0].todayCases})`, true)
@@ -216,7 +216,7 @@ client.on("message", message => {
       channel.join();
       const embed = new RichEmbed()
         .setTitle("OK. Aku masuk ya!")
-        .setColor(0x009975);
+        .setColor(0xd17eff);
       message.channel.send(embed);
     } else {
       message.reply("Masuk ke voice channel dulu!");
@@ -228,7 +228,7 @@ client.on("message", message => {
       message.guild.me.voiceChannel.leave();
       const embed = new RichEmbed()
         .setTitle("OK. Saya keluar!")
-        .setColor(0x009975);
+        .setColor(0xd17eff);
       message.channel.send(embed);
     } else {
       message.reply("Saya tidak ada di voice channel itu!");
@@ -237,7 +237,7 @@ client.on("message", message => {
   if (message.isMentioned(client.user)) {
     const embed = new RichEmbed()
       .setTitle("Ketik .help untuk info lebih lanjut.")
-      .setColor(0x42f5ef);
+      .setColor(0xd17eff);
     message.channel.send(embed);
   }
   if (msg.startsWith(prefix + "ping")) {
@@ -246,7 +246,7 @@ client.on("message", message => {
     message.channel.send(msg1) .then((msg1)=>{
       const embed = new RichEmbed()
         .setTitle("Pong!")
-        .setColor(0x009975)
+        .setColor(0xd17eff)
         .setDescription('Latency: ' + `${ping}`);
     setTimeout(function(){
          msg1.edit(embed);
@@ -255,7 +255,7 @@ client.on("message", message => {
 }
   if (msg.startsWith(prefix + "invite")) { 
     const embed = new RichEmbed()
-      .setColor(0x28c3d4)
+      .setColor(0xd17eff)
       .setDescription("[Klik atau copy link di sini](https://del.dog/aux)");
     message.channel.send(embed);
   }
@@ -264,7 +264,7 @@ client.on("message", message => {
     var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
     message.channel.send(msg1) .then((msg1)=>{
     const avatarEmbed = new RichEmbed()
-      .setColor(0x03f8fc)
+      .setColor(0xd17eff)
       .setImage(user.avatarURL);
     setTimeout(function(){
          msg1.edit(avatarEmbed);
@@ -329,7 +329,7 @@ client.on("message", message => {
             `Cuaca untuk daerah ${current.observationpoint} pada ${current.date}`
           )
           .setThumbnail(current.imageUrl)
-          .setColor(0x03f8fc)
+          .setColor(0xd17eff)
           .addField("Waktu bagian", `UTC${location.timezone}`, true)
           .addField("Skala suhu", location.degreetype, true)
           .addField("Suhu", `${current.temperature}℃`, true)
@@ -375,7 +375,7 @@ client.on("message", message => {
       message.channel.send(msg1) .then((msg1)=>{
       const embed = new RichEmbed()
         .setTitle("Gambar telah ditemukan!")
-        .setColor(0x03f8fc)
+        .setColor(0xd17eff)
         .setImage(urls[0]);
       setTimeout(function(){
          msg1.edit(embed);
@@ -386,34 +386,19 @@ client.on("message", message => {
  
   if (msg.startsWith(prefix + "help")) {
     const embed = new RichEmbed()
-      .setTitle("📎 DAFTAR COMMAND 📎")
-      .setColor(0x03f8fc)
-      .setThumbnail(
-        "https://cdn.discordapp.com/attachments/589334793699983362/651310354462408725/aaaasdsddas.jpg"
-      )
+      .setTitle("Daftar Command")
+      .setColor(0xd17eff)
       .addField(".ping", "Untuk mengecek status ping anda.")
       .addField(".dp [username]", "Untuk mengunduh avatar seseorang.")
-      .addField(
-        ".cuaca [nama kota]",
-        "Untuk menampilkan info cuaca di kota anda."
-      )
+      .addField(".cuaca [nama kota]", "Untuk menampilkan info cuaca di kota anda.")
       // .addField(
       //   ".gambar [keyword]",
       //   "Untuk menampilkan gambar yg ingin anda cari."
       // )
       .addField(".invite", "Untuk menampilkan link server Auxide.")
-      .addField(
-        "@username [message]",
-        "Untuk memberitahu user yang di-mention."
-      )
-      .addField(
-        ".corona",
-        "Untuk menampilkan info statistik corona di indonesia."
-      )
-    .addField(
-        ".shalat",
-        "Untuk menampilkan jadwal shalat di Tangerang."
-      )
+      .addField("@username [message]", "Untuk memberitahu user yang di-mention.")
+      .addField(".corona", "Untuk menampilkan info statistik corona di indonesia.")
+      .addField(".shalat", "Untuk menampilkan jadwal shalat di Tangerang.")
       .addField(".help", "Untuk menampilkan pesan ini.")
       .setFooter("Developed by ronhyun329");
     message.channel.send(embed);
