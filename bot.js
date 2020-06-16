@@ -127,7 +127,7 @@ client.on("message", message => {
        .addField("Owner", `${message.guild.owner.user}`)
        .addField("Server ID" , message.guild.id)
        .addField("Jumlah user", `${message.guild.memberCount}`)
-       .addField("User yang online", `${message.guild.members.filter(m => m.presence.status !== 'offline')}`)
+       .addField("User yang online", `${message.guild.members.filter(m => m.presence.status !== 'offline').size}`)
        .addField("jumlah roles", `${message.guild.roles.size}`);
     setTimeout(function(){
      msg1.delete(1);
@@ -245,7 +245,7 @@ client.on("message", message => {
     var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
     message.channel.send(msg1) .then((msg1)=>{
       const embed = new RichEmbed()
-        .setTitle("🏓 PONG")
+        .setTitle("Pong!")
         .setColor(0x009975)
         .setDescription('Latency: ' + `${ping}`);
     setTimeout(function(){
@@ -259,10 +259,6 @@ client.on("message", message => {
       .setDescription("[Klik atau copy link di sini](https://del.dog/aux)");
     message.channel.send(embed);
   }
-  // if (msg.startsWith(prefix + 'sumber')) {
-  // 	const embed = new RichEmbed().setTitle('Source code').setColor(0x03f8fc).setDescription("https://github.com/ronhyun329/renebytes-discord-bot")
-  // 	message.channel.send(embed);
-  // }
   if (message.content.startsWith(prefix + "dp")) {
     const user = message.mentions.users.first() || message.author;
     var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
@@ -405,7 +401,7 @@ client.on("message", message => {
       //   ".gambar [keyword]",
       //   "Untuk menampilkan gambar yg ingin anda cari."
       // )
-      .addField(">invite", "Untuk menampilkan link server Auxide.")
+      .addField(".invite", "Untuk menampilkan link server Auxide.")
       .addField(
         "@username [message]",
         "Untuk memberitahu user yang di-mention."
