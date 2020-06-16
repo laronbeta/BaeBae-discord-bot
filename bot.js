@@ -117,7 +117,7 @@ client.on("message", message => {
   var parts = message.content.split(" ");
  
  
-  if (msg.startsWith(prefix + "serverinfo")) {
+  if (msg.startsWith(prefix + "info")) {
    var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
      message.channel.send(msg1) .then((msg1)=>{
      const embed = new RichEmbed()
