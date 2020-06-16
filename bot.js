@@ -145,6 +145,21 @@ client.on("message", message => {
     })
   }
 
+ if(msg.startsWith(prefix + "role")){
+    let roleName = message.content.split(" ").slice(1).join(" ");
+    let membersWithRole = message.guild.members.filter(member => { 
+        return member.roles.find("name", roleName);
+    }).map(member => {
+        return member.user.username;
+    })
+    let embed = new discord.RichEmbed({
+        "title": `Member dengan role ${roleName}`,
+        "description": membersWithRole.join("\n"),
+        "color": 0xFF00FF
+    });
+    return message.channel.send({embed});
+}
+ 
   if (msg.startsWith(prefix + "shalat")) {
     request({ url: ram, qs: propertiesObject }, function(err, response, body) {
       if (err) {
