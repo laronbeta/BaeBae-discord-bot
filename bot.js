@@ -21,6 +21,15 @@ var datetime =
   "/" +
   currentdate.getFullYear();
 
+app.get("/", (request, response) => {
+  console.log(Date.now() + "Saya di sini!");
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+
 var cheerio = require("cheerio");
 var request = require("request");
 client.login(process.env.TOKEN);
