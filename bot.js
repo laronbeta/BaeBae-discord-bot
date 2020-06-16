@@ -225,7 +225,7 @@ client.on("message", message => {
   }
   if (message.isMentioned(client.user)) {
     const embed = new RichEmbed()
-      .setTitle("Ketik >help untuk info lebih lanjut.")
+      .setTitle("Ketik .help untuk info lebih lanjut.")
       .setColor(0x42f5ef);
     message.channel.send(embed);
   }
