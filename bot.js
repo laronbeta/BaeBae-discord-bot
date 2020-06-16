@@ -144,23 +144,6 @@ client.on("message", message => {
     message.react("✅");
     })
   }
-
- if(msg.startsWith(prefix + "role")){
-    let roleName = message.content.split(" ").slice(1).join(" ");
-    let membersWithRole = message.guild.members.filter(member => { 
-        return member.roles.find("name", roleName);
-    }).map(member => {
-        return member.user.username;
-    })
-    let embed = new RichEmbed({
-        "title": `Member dengan role ${roleName}`,
-        "description": `➡ ${membersWithRole.join} \n`,
-        "color": 0xFF00FF
-    });
-    return message.channel.send({embed});
-} else {
-      message.reply("Tidak ada member dengan role tersebut!");
-}
  
   if (msg.startsWith(prefix + "shalat")) {
     request({ url: ram, qs: propertiesObject }, function(err, response, body) {
