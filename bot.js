@@ -380,7 +380,7 @@ client.on("message", message => {
  
   if (msg.startsWith(prefix + "help")) {
     const embed = new RichEmbed()
-      .setTitle("📎 DAFTAR COMMANDS 📎")
+      .setTitle("📎 DAFTAR COMMAND 📎")
       .setColor(0x03f8fc)
       .setThumbnail(
         "https://cdn.discordapp.com/attachments/589334793699983362/651310354462408725/aaaasdsddas.jpg"
