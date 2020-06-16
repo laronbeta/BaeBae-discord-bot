@@ -123,12 +123,12 @@ client.on("message", message => {
      const embed = new RichEmbed()
        .setAuthor(message.author.username)
        .setColor("#3498db")
-       .addField("Name", `${message.guild.name}`)
+       .addField("Nama Server", `${message.guild.name}`)
        .addField("Owner", `${message.guild.owner.user}`)
        .addField("Server ID" , message.guild.id)
        .addField("Jumlah user", `${message.guild.memberCount}`)
        .addField("User yang online", `${message.guild.members.filter(m => m.presence.status !== 'offline'}`)
-       .addField("Roles", `${message.guild.roles.size}`);
+       .addField("jumlah roles", `${message.guild.roles.size}`);
     setTimeout(function(){
      msg1.delete(1);
   }, 2000)
