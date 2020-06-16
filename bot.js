@@ -152,7 +152,7 @@ client.on("message", message => {
     }).map(member => {
         return member.user.username;
     })
-    let embed = new discord.RichEmbed({
+    let embed = new RichEmbed({
         "title": `Member dengan role ${roleName}`,
         "description": membersWithRole.join("\n"),
         "color": 0xFF00FF
