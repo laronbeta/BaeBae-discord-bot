@@ -33,16 +33,16 @@ setInterval(() => {
 var cheerio = require("cheerio");
 var request = require("request");
 client.login(process.env.TOKEN);
-const activities_list = [
-  "sama ronhyun",
-  "follow ig @renebaebae"
-];
 
-client.on('ready', () => {
-    setInterval(() => {
-        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
-        client.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
-    }, 1000); // Runs this every 10 seconds.
+bot.on('ready', () => {
+    bot.user.setStatus('available')
+    bot.user.setPresence({
+        game: {
+            name: 'MONSTER',
+            type: "LISTENING",
+            url: "https://www.youtube.com"
+        }
+    });
 });
 function randomRange(min, max) {
   // returns an int >= min and <= max
