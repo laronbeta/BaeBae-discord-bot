@@ -34,9 +34,9 @@ var cheerio = require("cheerio");
 var request = require("request");
 client.login(process.env.TOKEN);
 
-bot.on('ready', () => {
-    bot.user.setStatus('available')
-    bot.user.setPresence({
+client.on('ready', () => {
+    client.user.setStatus('available')
+    client.user.setPresence({
         game: {
             name: 'MONSTER',
             type: "LISTENING",
