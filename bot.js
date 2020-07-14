@@ -38,9 +38,9 @@ client.on('ready', () => {
     client.user.setStatus('available')
     client.user.setPresence({
         game: {
-            name: 'MONSTER',
-            type: "LISTENING",
-            url: "https://www.youtube.com"
+            name: 'with ronhyun329',
+            type: "Streaming",
+            url: "https://www.youtube.com/watch?v=Ujb-gvqsoi0"
         }
     });
 });
