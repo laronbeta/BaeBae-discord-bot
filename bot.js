@@ -38,7 +38,7 @@ client.on('ready', () => {
     client.user.setStatus('available')
     client.user.setPresence({
         game: {
-            name: 'with ronhyun329',
+            name: 'with ronhyun',
             type: "Streaming",
             url: "https://www.youtube.com/watch?v=Ujb-gvqsoi0"
         }
