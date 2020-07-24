@@ -187,7 +187,7 @@ client.on("message", message => {
   //       console.log(log)
   //   })
   
-  if (msg.startsWith(prefix + "corona" || prefix + "c")) {
+  if (msg.startsWith(prefix + "corona") || msg.startsWith(prefix + "c")) {
     request({ url: cor, qs: propertiesObject }, function(err, response, body) {
       if (err) {
         console.log(err);
