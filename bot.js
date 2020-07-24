@@ -152,7 +152,7 @@ client.on("message", message => {
   }, 2000)
     message.mentions.users.first().send(embed);
     message.react("🆗");
-    message.react("✅");
+    message.react("❤");
     })
   }
  
@@ -240,7 +240,7 @@ client.on("message", message => {
       .setColor(0xd17eff);
     message.channel.send(embed);
   }
-  if (msg.startsWith(prefix + "ping")) {
+  if (msg.startsWith(prefix + "ping") || msg.startsWith(prefix + "p")) {
     var ping = Date.now() - message.createdTimestamp + "ms";
     var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
     message.channel.send(msg1) .then((msg1)=>{
