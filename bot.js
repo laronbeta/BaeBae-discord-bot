@@ -117,8 +117,8 @@ client.on("message", message => {
   var parts = message.content.split(" ");
  
  
- if (receivedMessage.content.includes(".k")) {
-    receivedMessage.channel.send(receivedMessage.content.replace('.k', ''));
+ if (message.content.includes(".k")) {
+    message.channel.send(message.content.replace('.k', ''));
 }
  
   if (msg.startsWith(prefix + "info")) {
