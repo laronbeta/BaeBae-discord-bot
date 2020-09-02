@@ -117,6 +117,10 @@ client.on("message", message => {
   var parts = message.content.split(" ");
  
  
+ if (receivedMessage.content.includes(".k")) {
+    receivedMessage.channel.send(receivedMessage.content.replace('.k', ''));
+}
+ 
   if (msg.startsWith(prefix + "info")) {
    var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
      message.channel.send(msg1) .then((msg1)=>{
