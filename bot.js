@@ -118,6 +118,7 @@ client.on("message", message => {
  
  
  if (message.content.includes(".k")) {
+    message.delete(1000);
     message.channel.send(message.content.replace('.k', ''));
 }
  
