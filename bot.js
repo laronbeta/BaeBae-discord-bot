@@ -267,6 +267,7 @@ client.on("message", message => {
   if (message.content.startsWith(prefix + "dp")) {
     const user = message.mentions.users.first() || message.author;
     var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
+    message.delete(100);
     message.channel.send(msg1) .then((msg1)=>{
     const avatarEmbed = new RichEmbed()
       .setColor(0xd17eff)
