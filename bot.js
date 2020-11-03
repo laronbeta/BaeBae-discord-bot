@@ -35,11 +35,11 @@ var request = require("request");
 client.login(process.env.TOKEN);
 
 client.on('ready', () => {
-    client.user.setStatus('available')
+    client.user.setStatus('idle')
     client.user.setPresence({
         game: {
-            name: 'with ronhyun',
-            type: "Streaming",
+            name: '.help',
+            type: "Listening",
             url: "https://www.youtube.com/watch?v=Ujb-gvqsoi0"
         }
     });
