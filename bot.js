@@ -41,7 +41,7 @@ client.on("ready", async () => {
   bot.user.setActivity(`over ${guild.approximatePresenceCount} members`, { type: 'Listening' })
   setInterval(() => {
     bot.user.setActivity(`over ${guild.approximatePresenceCount} members`, { type: 'Listening' })
-  },60000);
+ },60000);
  
  
 function randomRange(min, max) {
