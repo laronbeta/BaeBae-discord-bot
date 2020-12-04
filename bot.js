@@ -36,7 +36,7 @@ client.login(process.env.TOKEN);
 
 client.on("ready", async () => {
   console.log("Ready");
-  guild = client.guilds.cache.get(process.env.guildId);
+  guild = client.guilds.cache.get(config.guildId);
   await guild.fetch();
   client.user.setActivity(`over ${guild.approximatePresenceCount} members`, { type: 'Listening' })
   setInterval(() => {
