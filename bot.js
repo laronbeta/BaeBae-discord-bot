@@ -38,9 +38,9 @@ client.on("ready", async () => {
   console.log("Ready");
   guild = client.guilds.cache.get(process.env.guildId);
   await guild.fetch();
-  bot.user.setActivity(`over ${guild.approximatePresenceCount} members`, { type: 'Listening' })
+  client.user.setActivity(`over ${guild.approximatePresenceCount} members`, { type: 'Listening' })
   setInterval(() => {
-    bot.user.setActivity(`over ${guild.approximatePresenceCount} members`, { type: 'Listening' })
+    client.user.setActivity(`over ${guild.approximatePresenceCount} members`, { type: 'Listening' })
  },60000);
  });
  
@@ -133,7 +133,7 @@ client.on("message", message => {
        .addField("Owner", `${message.guild.owner.user}`)
        .addField("Server ID" , message.guild.id)
        .addField("Jumlah user", `${message.guild.memberCount}`)
-       .addField("User yang online", `${message.guild.members.filter(m => m.presence.status !== 'offline').size}`)
+       .addField("User yang online", `${message.guild.approximatePresenceCount}`)
        .addField("jumlah roles", `${message.guild.roles.size}`);
     setTimeout(function(){
      msg1.delete(1);
