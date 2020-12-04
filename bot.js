@@ -34,15 +34,15 @@ var cheerio = require("cheerio");
 var request = require("request");
 client.login(process.env.TOKEN);
 
-client.on("ready", async () => {
-  console.log("Ready");
-  guild = client.guilds.cache.get(config.guildId);
-  await guild.fetch();
-  client.user.setActivity(`over ${guild.approximatePresenceCount} members`, { type: 'Listening' })
-  setInterval(() => {
-    client.user.setActivity(`over ${guild.approximatePresenceCount} members`, { type: 'Listening' })
- },60000);
- });
+client.on('ready', () => {
+    client.user.setPresence({
+        game: {
+            name: '.help',
+            type: "Listening",
+            url: "https://www.youtube.com/watch?v=Ujb-gvqsoi0"
+        }
+    });
+});
  
  
 function randomRange(min, max) {
