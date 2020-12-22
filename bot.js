@@ -12,7 +12,6 @@ const app = express();
 const cor = "https://corona-stats.online/id";
 const ram = "http://api.aladhan.com/v1/timingsByCity?city=Tangerang&country=Indonesia&method=3"
 const propertiesObject = { format: "json" };
-const Twitter = require('twit')
 
 var currentdate = new Date();
 var datetime =
@@ -124,38 +123,6 @@ client.on("message", message => {
     message.delete(100);
     message.channel.send(message.content.replace('.k', ''));
 }
- 
- //Set up discord and twitter token blah blah blah...
-
-const twitterClient = new Twitter(twitterConf);
-
-// create a stream to follow tweets
-const stream = twitterClient.stream('statuses/filter', {
-    follow: '25073877', //donaldtrump twt id
-});
-
-const dest = '765217504305872896' //streaming twts to #twitter channel
-
-// TWITTER MAIN PROCESS
-// stream directly to that channel
-stream.on('tweet', tweet => {
-    if (tweet.retweeted_status  //to prevent other user tweets and only get specifically from the user
-        || tweet.in_reply_to_status_id_str 
-        || tweet.in_reply_to_user_id
-        || tweet.in_reply_to_user_id_str
-        || tweet.in_reply_to_screen_name) return true;
-      
-    if (tweet.current_user_retweet) { //to show the retweeted message by the user
-        const twitterRetweetMessage = `**${tweet.user.name} (@${tweet.user.screen_name}) new retweet!**\n https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
-        bot.channels.cache.get(dest).send(twitterRetweetMessage);
-        console.log(`A new retweet has been posted by @${tweet.user.screen_name}!`)
-        return false;
-    }
-    const twitterMessage = `**${tweet.user.name} (@${tweet.user.screen_name}) new tweet!**\n https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
-    bot.channels.cache.get(dest).send(twitterMessage);
-    console.log(`A new tweet has been posted by @${tweet.user.screen_name}!`)
-    return false;
-})
  
   if (msg.startsWith(prefix + "info")) {
    var msg1 = '𝙈𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙠𝙖𝙣, 𝙢𝙤𝙝𝙤𝙣 𝙩𝙪𝙣𝙜𝙜𝙪...';
