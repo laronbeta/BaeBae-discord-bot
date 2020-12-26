@@ -149,6 +149,14 @@ client.on("message", message => {
     })
   }
  
+ if(message.content.includes("berpulang")){
+  message.react("🙏");
+ }
+ 
+ if(message.content.includes("bergabung")){
+  message.react("👋");
+ }
+ 
   if (msg.startsWith(prefix + "shalat")) {
     request({ url: ram, qs: propertiesObject }, function(err, response, body) {
       if (err) {
