@@ -53,11 +53,11 @@ function randomRange(min, max) {
 
 
 client.on('guildMemberAdd', member => {
-    member.guild.channels.get('792266172741582878').send(member.user.username + " telah bergabung ke dalam server ini.");
+    guild.channels.cache.find(channel => channel.name === 'welcome-messages').send(member.user.username + " telah bergabung ke dalam server ini.");
 });
 
 client.on('guildMemberRemove', member => {
-    member.guild.channels.get('792266172741582878').send("Telah berpulang " + member.user.username + " meninggalkan server ini. 🙏");
+    uild.channels.cache.find(channel => channel.name === 'welcome-messages').send("Telah berpulang " + member.user.username + " meninggalkan server ini. 🙏");
 });
 
 client.on("guildCreate", guild => {
