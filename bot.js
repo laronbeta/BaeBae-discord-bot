@@ -52,29 +52,17 @@ function randomRange(min, max) {
 }
 
 client.on("guildMemberAdd", member => {
-  const channel = member.guild.channels.find(ch => ch.name === "chit-chat");
+  const channel = member.guild.channels.get('792228541906550805');
   let memberTag = member.user.username;
   if (!channel) return;
-  const embed = new RichEmbed()
-    .setTitle(memberTag + " telah bergabung ke dalam server.")
-    .setColor(0xd17eff);
-  channel.send(embed);
-  setTimeout(function() {
-    channel.send(`Halo ${member} 👋`);
-  }, 1000);
+  message.channel.send(`${member} telah bergabung ke dalam server ini. 👋`);
 });
 
 client.on("guildMemberRemove", member => {
-  const channel = member.guild.channels.find(ch => ch.name === "chit-chat");
+  const channel = member.guild.channels.get('792228541906550805');
   let memberTag = member.user.username;
   if (!channel) return;
-  const embed = new RichEmbed()
-    .setTitle(memberTag + " telah meninggalkan server.")
-    .setColor(0xd17eff);
-  channel.send(embed);
-  setTimeout(function() {
-    channel.send(`Selamat tinggal 👋`);
-  }, 1000);
+  message.channel.send(`Telah berpulang ${member} meninggalkan server ini. 🙏`);
 });
 
 client.on("guildCreate", guild => {
