@@ -51,7 +51,7 @@ function randomRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-cnst channelId = '792266172741582878'
+const channelId = '792266172741582878'
 
 client.on('guildMemberAdd', member => {
     member.guild.channels.cache.get(channelId).send("@<${member.id}> telah bergabung ke dalam server ini. 👋");
