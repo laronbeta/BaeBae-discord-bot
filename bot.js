@@ -65,6 +65,14 @@ client.on('guildMemberRemove', member => {
   channel.send("Telah berpulang ${memberTag} meninggalkan server ini. 🙏");
 });
 
+client.on('guildMemberAdd', member => {
+    member.guild.channels.get('792228541906550805').send("${member.user.username} telah bergabung ke dalam server ini. 👋")
+})
+
+client.on('guildMemberRemove', member => {
+    member.guild.channels.get('792228541906550805').send("Telah berpulang ${member.user.username} meninggalkan server ini. 🙏")
+})
+
 client.on("guildCreate", guild => {
   let channelID;
   let channels = guild.channels;
