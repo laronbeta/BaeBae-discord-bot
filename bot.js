@@ -55,14 +55,14 @@ client.on("guildMemberAdd", member => {
   const channel = member.guild.channels.get('792228541906550805');
   let memberTag = member.user.username;
   if (!channel) return;
-  message.channel.send(`${member} telah bergabung ke dalam server ini. 👋`);
+  channel.send(`${member} telah bergabung ke dalam server ini. 👋`);
 });
 
 client.on("guildMemberRemove", member => {
   const channel = member.guild.channels.get('792228541906550805');
   let memberTag = member.user.username;
   if (!channel) return;
-  message.channel.send(`Telah berpulang ${member} meninggalkan server ini. 🙏`);
+  channel.send(`Telah berpulang ${member} meninggalkan server ini. 🙏`);
 });
 
 client.on("guildCreate", guild => {
