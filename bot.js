@@ -53,11 +53,11 @@ function randomRange(min, max) {
 
 
 client.on('guildMemberAdd', member => {
-    member.guild.channels.get('792228541906550805').send(member.user.username + " telah bergabung ke dalam server ini.");
+    member.guild.channels.get('792266172741582878').send(member.user.username + " telah bergabung ke dalam server ini.");
 });
 
 client.on('guildMemberRemove', member => {
-    member.guild.channels.get('792228541906550805').send("Telah berpulang " + member.user.username + " meninggalkan server ini. 🙏");
+    member.guild.channels.get('792266172741582878').send("Telah berpulang " + member.user.username + " meninggalkan server ini. 🙏");
 });
 
 client.on("guildCreate", guild => {
