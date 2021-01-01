@@ -38,8 +38,8 @@ client.login(process.env.TOKEN);
 client.on('ready', () => {
     client.user.setPresence({
         game: {
-            name: 'Auxide',
-            type: "Listening",
+            name: 'Aüxide Syndicate',
+            type: "Watching",
             url: "https://www.youtube.com/watch?v=Ujb-gvqsoi0"
         }
     });
