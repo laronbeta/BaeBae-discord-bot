@@ -38,7 +38,7 @@ client.login(process.env.TOKEN);
 client.on('ready', () => {
     client.user.setPresence({
         game: {
-            name: '.help',
+            name: 'Aüxide',
             type: "Listening",
             url: "https://www.youtube.com/watch?v=Ujb-gvqsoi0"
         }
