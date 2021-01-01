@@ -51,18 +51,6 @@ function randomRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const channelId = '792266172741582878'
-
-client.on('guildMemberAdd', (member) => {
-   console.log(member);
-    member.guild.channels.cache.get(channelId).send("@<${member.id}> telah bergabung ke dalam server ini. 👋");
-});
-
-client.on('guildMemberRemove', (member) => {
- console.log(member);
-    member.guild.channels.cache.get(channelId).send("Telah berpulang @<${member.id}> meninggalkan server ini. 🙏");
-});
-
 client.on("guildCreate", guild => {
   let channelID;
   let channels = guild.channels;
