@@ -166,7 +166,7 @@ client.on("message", message => {
                 const embed = new RichEmbed()
                     .setColor(0xd17eff)
                     .setAuthor(`Statistik COVID-19 di Indonesia pada hari ini.`)
-                    .setFooter("Menggunakan data dari https://corona-stats.online/id")
+                    .setFooter("Menggunakan API dari https://corona-stats.online/id")
                     .addField("Total kasus", `${corona.data[0].cases} (+${corona.data[0].todayCases})`, true)
                     .addField("Telah sembuh", `${corona.data[0].recovered}`, true)
                     .addField("Meninggal", `${corona.data[0].deaths} (+${corona.data[0].todayDeaths})`, true)
