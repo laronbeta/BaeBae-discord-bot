@@ -89,7 +89,7 @@ client.on("message", message => {
         })
     }
 
-    if (message.content.includes("<@")) {
+    if (message.content.includes("<@257474897398333440>")) {
         var link = "http://discordapp.com/channels/" + message.guild.id + "/" + message.channel.id + "/" + message.id;
         var msg1 = '𝙋𝙚𝙨𝙖𝙣 𝙩𝙚𝙡𝙖𝙝 𝙙𝙞𝙠𝙞𝙧𝙞𝙢.';
         message.channel.send(msg1).then((msg1) => {
