@@ -104,8 +104,9 @@ client.on("message", message => {
                 msg1.delete(1);
             }, 2000)
             message.mentions.users.first().send(embed);
-            message.react("🆗");
-            message.react("❤");
+            message.react(":regional_indicator_o:");
+            message.react("regional_indicator_t:");
+            message.react("regional_indicator_w:")
         })
     }
 
