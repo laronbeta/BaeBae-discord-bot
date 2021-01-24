@@ -1,5 +1,5 @@
 # Renebytes Discord Bot
-Made with Javascript and ❤️ by ronhyun329
+Made with Javascript and ❤️ by ronaldichdr
 
 Currently hosted in [Heroku](https://heroku.com)
 
