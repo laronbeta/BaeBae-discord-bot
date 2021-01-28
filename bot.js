@@ -49,14 +49,6 @@ client.on('ready', () => {
             url: "https://www.youtube.com/watch?v=Ujb-gvqsoi0"
         }
     });
-    var colors = ['#8585ff','#fff681','#a073fd','#fd73b9'];
-    var random = Math.floor(Math.random() * colors.length);
-    var role = message.guild.roles.find("colorized", "colorized");
-    setInterval(() => {
-        role.edit({
-            color: colors[random]
-        })
-    }, 5000);
 });
 
 
@@ -72,7 +64,15 @@ client.on("message", message => {
     let msg = message.content;
     var parts = message.content.split(" ");
 
-
+    var colors = ['#8585ff','#fff681','#a073fd','#fd73b9'];
+    var random = Math.floor(Math.random() * colors.length);
+    var role = message.guild.roles.find("colorized", "colorized");
+    setInterval(() => {
+        role.edit({
+            color: colors[random]
+        })
+    }, 5000);
+    
     if (message.content.includes(".k")) {
         message.delete(100);
         message.channel.send(message.content.replace('.k', ''));
