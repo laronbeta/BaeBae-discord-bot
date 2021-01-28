@@ -67,8 +67,8 @@ client.on("message", message => {
     if (msg.startsWith(prefix + "l")) {
     if(!message.guild) return;
     if(!message.guild.member(client.user).hasPermission('MANAGE_ROLES')) return;
-    var random = Math.floor(Math.random() * colors.length);
     var colors = ['#8585ff','#fff681','#a073fd','#fd73b9'];
+    var random = Math.floor(Math.random() * colors.length);
     var role = message.guild.roles.find(role => role.name === "colorized");
     setInterval(() => {
         role.edit({
