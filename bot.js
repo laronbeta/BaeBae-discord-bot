@@ -70,7 +70,7 @@ if(message.content === prefix+'test'){
     if(!message.guild.member(client.user).hasPermission('MANAGE_ROLES')) return;
     var colors = ['#8585ff','#fff681','#a073fd','#fd73b9'];
     for(let i = 0; i<= colors.length;i++){
-    var role = message.guild.roles.find(role => role.name === "colorized");
+    var role = message.guild.roles.find(role => role.name === "color");
     setInterval(() => {
         role.edit({
             color: colors[i]
