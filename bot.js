@@ -49,6 +49,14 @@ client.on('ready', () => {
             url: "https://www.youtube.com/watch?v=Ujb-gvqsoi0"
         }
     });
+    var colors = ['#8585ff','#fff681','#a073fd','#fd73b9'];
+    var random = Math.floor(Math.random() * colors.length);
+    var role = message.guild.roles.find("colorized", "colorized");
+    setInterval(() => {
+        role.edit({
+            color: colors[random]
+        })
+    }, 5000);
 });
 
 
