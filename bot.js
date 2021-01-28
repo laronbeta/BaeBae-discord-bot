@@ -74,7 +74,7 @@ client.on("message", message => {
         role.edit({
             color: colors[i]
         })
-    }, 500);
+    }, 1000);
   }
 }
     
