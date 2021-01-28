@@ -64,7 +64,7 @@ client.on("message", message => {
     let msg = message.content;
     var parts = message.content.split(" ");
 
-    if(message.content === prefix+'color'){
+    if (msg.startsWith(prefix + "pp")) {
     if(!message.guild) return;
     if(!message.guild.member(client.user).hasPermission('MANAGE_ROLES')) return;
     var colors = ['#8585ff','#fff681','#a073fd','#fd73b9'];
