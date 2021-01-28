@@ -64,14 +64,19 @@ client.on("message", message => {
     let msg = message.content;
     var parts = message.content.split(" ");
 
+    if(message.content === prefix+'color'){
+    if(!message.guild) return;
+    if(!message.guild.member(client.user).hasPermission('MANAGE_ROLES')) return;
     var colors = ['#8585ff','#fff681','#a073fd','#fd73b9'];
-    var random = Math.floor(Math.random() * colors.length);
-    var role = message.guild.roles.find("colorized", "colorized");
+    for(let i = 0; i<= colors.length;i++){
+    var role = message.guild.roles.find(role => role.name === "rolename");
     setInterval(() => {
         role.edit({
-            color: colors[random]
+            color: colors[i]
         })
     }, 5000);
+  }
+}
     
     if (message.content.includes(".k")) {
         message.delete(100);
