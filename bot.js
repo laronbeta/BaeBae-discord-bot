@@ -375,8 +375,6 @@ if(message.content === prefix+'test'){
             //   ".gambar [keyword]",
             //   "Untuk menampilkan gambar yg ingin anda cari."
             // )
-            .addField(".invite", "Untuk menampilkan link server Auxide.")
-            .addField("@username [message]", "Untuk memberitahu user yang di-mention.")
             .addField(".corona", "Untuk menampilkan info statistik corona di indonesia.")
             .addField(".shalat", "Untuk menampilkan jadwal shalat di Tangerang.")
             .addField(".help", "Untuk menampilkan pesan ini.")
