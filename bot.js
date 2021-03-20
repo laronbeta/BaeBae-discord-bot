@@ -8,7 +8,6 @@ const {
 const weather = require("weather-js");
 const client = new Client();
 const prefix = '.';
-const ytdl = require("ytdl-core");
 const dbl = require("dbl.js");
 const http = require("http");
 const express = require("express");
